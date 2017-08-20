@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LSOLT</title>
+      <link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://bootswatch.com/cyborg/bootstrap.min.css"></script>
+    <script type="text/javascript" src="http://gdc.indeed.com/ads/apiresults.js"></script>
+</head>
+<body>
+	<div class="jumbotron" style="height:250px">
+        <img src="images/sun.jpg" style="position: relative;top:-50px; height: 200px; width: 100%;"/>
+    	<h1 style="color:#FFF; position: absolute;top: -15px; left: 20px; width: 100%; color:black">Lets Start Our Lives Together!</h1>
+        <p style="color:#FFF; position: absolute;top: 85px; left: 20px; width: 100%;">welcome to lets start our lives together, lets get started then</p>
+        <p style="color:#FFF; position: absolute;top: 125px; left: 20px; width: 100%;">Shall we?</p>
+    </div>
+    <div class="container">
+    <h4>Enter 2 Jobs to Search:</h4>
+    </div>
+    <div class="container">
+        <span><font size="5"><b>Job 1:</b></font></span><input type="text" id="job1">
+        <span><font size="5"><b>Job 2:</b></font></span><input type="text" id="job2">
+        <button id="submitButton" style="background-color:black;color:white;">Search</button>
+    </div>
+    <div id="div1" class="container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Estimated Annual Salary
+                    <th> Low Salary
+                    <th> Average Salary
+                    <th> Low After Taxes
+                    <th> Average After Taxes
+                    <th> Expected Salary
+<tbody>
+                <tr>
+                    <th id="j1">Job 1
+                    <td id=""><span>$</span><span id="j1min"></span>
+                    <td id=""><span>$</span><span id="j1max"></span>
+                    <td id=""><span>$</span><span id="j1mintx"></span>
+                    <td id=""><span>$</span><span id="j1maxtx"></span>
+                    <td><span>~$</span><span id="j1estimated"></span>
+<tr>
+                    <th id="j2"> Job 2
+                    <td id=""><span>$</span><span id="j2min"></span>
+                    <td id=""><span>$</span><span id="j2max"></span>
+                    <td id=""><span>$</span><span id="j2mintx"></span>
+                    <td id=""><span>$</span><span id="j2maxtx"></span>
+                    <td><span>~$</span><span id="j2estimated"></span>
+<tr>
+                    <th class="blue"> Combined
+                    <td id=""><span>$</span><span id="totalmin"></span>
+                    <td id=""><span>$</span><span id="totalmax"></span>
+                    <td id=""><span>$</span><span id="totalmintx"></span>
+                    <td id=""><span>$</span><span id="totalmaxtx"></span>
+                    <td><span>~$</span><span id="totalestimated"></span>
+        </table>
+        <div align="center">
+            <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
+            <span id="minimum"></span>
+        </div>
+        <h3>Result</h3>
+    </div>
+    <table class="table table-bordered table-striped" style="width:80%;" align="center">
+        <thead>
+            <tr>
+                <th>#
+                <th> City Name
+                <th> State
+                <th>Number of <span id="first"></span> jobs
+                <th>Number of <span id="second"></span> jobs
+                <th> Radius(m)
+        <tbody id="chart">
+
+    </table>
+    <div align="center">
+      <span id="indeed_at"><a title="Job Search" href="https://www.indeed.com" rel="nofollow">jobs by <img alt=Indeed src="https://www.indeed.com/p/jobsearch.gif" style="border: 0; vertical-align: middle;"></a></span>
+       <script src="test.js"></script>
+    </div>
+</body>
+</html>

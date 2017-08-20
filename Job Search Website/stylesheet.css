@@ -1,0 +1,20 @@
+table{
+    border-style:solid;
+}
+td{
+  border-style:solid;
+  border-width: 1px;
+}
+th{
+  border-style:solid;
+}
+
+#div-with-bg
+{
+	background-image: url('http://esq.h-cdn.co/assets/cm/15/06/54d3d4dba3e94_-_cage-gifs-monster.gif');
+}
+
+.whiteText
+{
+	font:"Lucida Console", Monaco, monospace;
+	color:#FFF;

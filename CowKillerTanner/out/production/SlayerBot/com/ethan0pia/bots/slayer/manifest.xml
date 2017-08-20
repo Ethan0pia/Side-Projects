@@ -1,0 +1,25 @@
+<manifest>
+  <main-class>com.ethan0pia.bots.slayer.main</main-class>
+  <name>SlayerHer</name>
+  <tag-line>Does Slayer</tag-line>
+  <description>Currently does first master</description>
+  <version>0.1.2</version>
+  <compatibility>
+    <game-type>RS3</game-type>
+  </compatibility>
+  <categories>
+    <category>SLAYER</category>
+    <category>COMBAT</category>
+  </categories>
+  <!--Required to publish on the bot store-->
+  <internal-id>SlayerHer</internal-id>
+  <!--The rest are optional-->
+  <open-source>false</open-source>
+  <hidden>true</hidden>
+  <!--If you need to hide it from the bot store for maintenance-->
+  <access>public</access>
+  <tags>
+  </tags>
+  <resources>
+  </resources>
+</manifest>
