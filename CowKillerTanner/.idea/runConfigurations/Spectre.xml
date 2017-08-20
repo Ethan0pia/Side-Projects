@@ -3,7 +3,7 @@
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     <option name="MAIN_CLASS_NAME" value="com.runemate.boot.Boot" />
     <option name="VM_PARAMETERS" value="" />
-    <option name="PROGRAM_PARAMETERS" value="-sdk -login=ethan.dunham@gmail.com:spaceba11s -Xmx1300M" />
+    <option name="PROGRAM_PARAMETERS" value="-sdk" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_144\jre" />
