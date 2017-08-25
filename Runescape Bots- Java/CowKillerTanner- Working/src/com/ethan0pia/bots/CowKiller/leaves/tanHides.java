@@ -1,6 +1,7 @@
 package com.ethan0pia.bots.CowKiller.leaves;
 
 import com.runemate.game.api.hybrid.entities.Npc;
+import com.runemate.game.api.hybrid.local.Camera;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.hybrid.region.Npcs;
 import com.runemate.game.api.script.Execution;
@@ -13,8 +14,9 @@ public class tanHides extends LeafTask {
 	public void execute() {
         Jack = Npcs.newQuery().names("Jack Oval").results().nearest();
         if(Jack!=null) {
+            Camera.concurrentlyTurnTo(Jack);
             Jack.interact("Tan hide", "Jack Oval");
-            Execution.delayWhile(() -> !Inventory.contains("Cowhide"), 4000);
+            Execution.delayUntil(() -> !Inventory.contains("Cowhide"), 1000, 4000);
         }
 	}
 

@@ -1,6 +1,7 @@
 package com.ethan0pia.bots.CowKiller.branches;
 
 import com.runemate.game.api.hybrid.entities.Player;
+import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 import com.runemate.game.api.hybrid.location.Coordinate;
@@ -9,8 +10,8 @@ import com.ethan0pia.bots.CowKiller.leaves.walkJack;
 import com.ethan0pia.bots.CowKiller.leaves.tanHides;
 
 public class atJack extends BranchTask {
-	
-	private Coordinate jackArea = new Coordinate(2888,3501,0);
+
+	private final Area jackArea= new Area.Rectangular(new Coordinate(2886,3504,0), new Coordinate(2891,3499,0));
 	private Player player;
 
 	private walkJack Jack= new walkJack();
@@ -30,14 +31,11 @@ public class atJack extends BranchTask {
 	public boolean validate() {
 		//by jack square check
 		player = Players.getLocal();
-		if(player !=null) {
-			if (player.distanceTo(jackArea) < 3) {
-				return true;
-			} else {
-				return false;
-			}
+		if(player !=null && jackArea.contains(player)) {
+			return true;
+		} else {
+			return false;
 		}
-		return true;
 	}
 
 }

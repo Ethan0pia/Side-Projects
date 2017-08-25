@@ -1,18 +1,21 @@
 package com.ethan0pia.bots.CowKiller.branches;
 
 import com.runemate.game.api.hybrid.entities.Player;
+import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.region.Players;
+import com.ethan0pia.bots.CowKiller.leaves.walkCows;
 
 public class atCows extends BranchTask {
-	
-	private Coordinate cowArea = new Coordinate(2885,3487,0);
+
 	private Player player;
 
-	private atTavLoad tavLoad= new atTavLoad();
+	private walkCows tavLoad= new walkCows();
 	private checkGround ground= new checkGround();
+
+	private final Area cowArea= new Area.Rectangular(new Coordinate(2877,3497,0), new Coordinate(2892,3479,0));
 
 	@Override
 	public TreeTask successTask() {
@@ -27,15 +30,14 @@ public class atCows extends BranchTask {
 	@Override
 	public boolean validate() {
 		//inside cow area rectangle check
+
+
 		player = Players.getLocal();
-		if(player != null) {
-			if (player.distanceTo(cowArea) < 7) {
+		if(player != null && cowArea.contains(player)) {
 				return true;
-			} else {
+		} else {
 				return false;
-			}
 		}
-		return false;
 	}
 
 }

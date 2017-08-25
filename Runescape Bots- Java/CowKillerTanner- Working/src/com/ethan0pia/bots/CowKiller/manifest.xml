@@ -1,14 +1,16 @@
 <manifest>
   <main-class>com.ethan0pia.bots.CowKiller.cowKiller</main-class>
-  <name>Cow Killer and Tanner</name>
-  <tag-line>Kills cows and makes hard leather.</tag-line>
-  <description>Kills cows in Taverly and tans them into hard leather</description>
+  <name>0piaCows</name>
+  <tag-line>F2P Kills cows, makes leather 150-250kph</tag-line>
+  <description>Kills Cows, makes leather, banks. ~150-250 per hour.
+    Have Weapon equipped, no ammo!</description>
   <version>0.1</version>
   <compatibility>
     <game-type>RS3</game-type>
   </compatibility>
   <categories>
     <category>COMBAT</category>
+    <category>Moneymaking</category>
   </categories>
   <!--Required to publish on the bot store-->
   <internal-id>CowKillerTanner</internal-id>
@@ -19,6 +21,8 @@
   <access>public</access>
   <tags>
     <tag>cows</tag>
+    <tag>hide</tag>
+    <tag>tan</tag>
   </tags>
   <resources>
   </resources>

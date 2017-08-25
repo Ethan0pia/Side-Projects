@@ -1,6 +1,7 @@
 package com.ethan0pia.bots.CowKiller.leaves;
 
 import com.runemate.game.api.hybrid.entities.Player;
+import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.location.navigation.Traversal;
 import com.runemate.game.api.hybrid.location.navigation.web.WebPath;
@@ -9,18 +10,19 @@ import com.runemate.game.api.script.framework.tree.LeafTask;
 
 public class walkJack extends LeafTask {
 
-    private Coordinate jackArea = new Coordinate(2890,3500,0);
+    private Coordinate jackCoords;
+	private final Area jackArea= new Area.Rectangular(new Coordinate(2886,3500,0), new Coordinate(2890,3498,0));
     private Player player;
 
 	@Override
 	public void execute() {
 		player = Players.getLocal();
-		if (!player.isMoving()) {
-			final WebPath path = Traversal.getDefaultWeb().getPathBuilder().buildTo(jackArea);
+		jackCoords = jackArea.getRandomCoordinate();
+		if (player!=null && jackCoords!=null) {
+			final WebPath path = Traversal.getDefaultWeb().getPathBuilder().buildTo(jackCoords);
 			if (path != null) {
 				path.step(true);
 			}
 		}
 	}
-
 }
