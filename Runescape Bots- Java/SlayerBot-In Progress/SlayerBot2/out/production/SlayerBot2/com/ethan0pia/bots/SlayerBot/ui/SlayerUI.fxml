@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="604.0" type="javafx.scene.layout.GridPane" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="724.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" contentDisplay="TOP" prefHeight="67.0" prefWidth="600.0" text="OpiaSlayer" textFill="RED">
+         <font>
+            <Font name="Niagara Engraved" size="62.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="1.0" layoutY="105.0" prefHeight="223.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="288.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.0" minWidth="2.0" prefWidth="12.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="211.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="432.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="447.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="299.0" text="Runtime:" textFill="#f80303">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="299.0" text="Tasks Completed:" textFill="RED" GridPane.rowIndex="2">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="299.0" text="Current Task:" textFill="RED" GridPane.rowIndex="3">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="299.0" text="Total GP Gained:" textFill="RED" GridPane.rowIndex="5">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="299.0" text="GP Per Hour:" textFill="RED" GridPane.rowIndex="6">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label id="uiRunetime" fx:id="uiRunetime" prefHeight="39.0" prefWidth="276.0" text="??" GridPane.columnIndex="2">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label id="uiSlayerMaster" fx:id="uiSlayerMaster" prefHeight="28.0" prefWidth="300.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="299.0" text="Slayer Master:" textFill="RED" GridPane.rowIndex="1">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label id="uiTasksCompleted" fx:id="uiTasksCompleted" prefHeight="28.0" prefWidth="300.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label id="uiCurrentTask" fx:id="uiCurrentTask" prefHeight="28.0" prefWidth="300.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label id="uiTotalGP" fx:id="uiTotalGP" prefHeight="28.0" prefWidth="300.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label id="uiGPH" fx:id="uiGPH" prefHeight="28.0" prefWidth="300.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+               <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="299.0" text="Monsters Left:" textFill="RED" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="28.0" />
+                  </font>
+               </Label>
+               <Label id="uiMonstersLeft" fx:id="uiMonstersLeft" prefHeight="28.0" prefWidth="300.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="27.0" />
+                  </font>
+               </Label>
+         </children>
+      </GridPane>
+      <ProgressBar id="SlayerStatusBar" fx:id="SlayerStatusBar" layoutX="24.0" layoutY="416.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <GridPane layoutX="24.0" layoutY="465.0" prefHeight="81.0" prefWidth="202.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="24.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Attack:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiAttackLevel" fx:id="uiAttackLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiAttackXPGain" fx:id="uiAttackXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiAttackLevelGain" fx:id="uiAttackLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="24.0" layoutY="331.0" prefHeight="81.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="41.0" prefWidth="152.0" text="Slayer:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiSlayerLevel" fx:id="uiSlayerLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiSlayerXPGain" fx:id="uiSlayerXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiSlayerLevelGain" fx:id="uiSlayerLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <ProgressBar id="AttackStatusBar" fx:id="AttackStatusBar" layoutX="24.0" layoutY="550.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <GridPane layoutX="207.0" layoutY="465.0" prefHeight="81.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="21.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Strength:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiStrengthLevel" fx:id="uiStrengthLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiStrengthXPGain" fx:id="uiStrengthXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiStrengthLevelGain" fx:id="uiStrengthLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <ProgressBar id="StrengthStatusBar" fx:id="StrengthStatusBar" layoutX="207.0" layoutY="550.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <GridPane layoutX="400.0" layoutY="465.0" prefHeight="81.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Defense:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiDefenseLevel" fx:id="uiDefenseLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiDefenseXPGain" fx:id="uiDefenseXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiDefenseLevelGain" fx:id="uiDefenseLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="24.0" layoutY="596.0" prefHeight="81.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Magic:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiMagicLevel" fx:id="uiMagicLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiMagicXPGain" fx:id="uiMagicXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiMagicLevelGain" fx:id="uiMagicLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="400.0" layoutY="596.0" prefHeight="81.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Ranged:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiRangeLevel" fx:id="uiRangeLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiRangeXPGain" fx:id="uiRangeXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiRangeLevelGain" fx:id="uiRangeLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <ProgressBar id="DefenseStatusBar" fx:id="DefenseStatusBar" layoutX="400.0" layoutY="549.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <ProgressBar id="MagicStatusBar" fx:id="MagicStatusBar" layoutX="24.0" layoutY="680.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <ProgressBar id="RangedStatusBar" fx:id="RangedStatusBar" layoutX="400.0" layoutY="680.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <GridPane layoutX="199.0" layoutY="335.0" prefHeight="81.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Constitution:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiHPLevel" fx:id="uiHPLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiHPXPGain" fx:id="uiHPXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiHPLevelGain" fx:id="uiHPLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="400.0" layoutY="335.0" prefHeight="81.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Prayer:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="138.0" text="Level:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="XP Gained:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="141.0" text="Levels Gained:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="uiPrayerLevel" fx:id="uiPrayerLevel" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="uiPrayerXPGain" fx:id="uiPrayerXPGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="uiPrayerLevelGain" fx:id="uiPrayerLevelGain" prefHeight="21.0" prefWidth="71.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <ProgressBar id="ConstitutionStatusBar" fx:id="ConstitutionStatusBar" layoutX="199.0" layoutY="416.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <ProgressBar id="PrayerStatusBar" fx:id="PrayerStatusBar" layoutX="401.0" layoutY="416.0" prefHeight="23.0" prefWidth="142.0" progress="0.0" />
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="67.0" prefHeight="39.0" prefWidth="604.0" text="By EthanOpia and Exaggerate" textFill="RED">
+         <font>
+            <Font name="Bookman Old Style" size="23.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="121.0" fitWidth="121.0" layoutX="224.0" layoutY="589.0">
+         <image>
+            <Image url="com/ethan0pia/bots/SlayerBot/ui/Icon.png" />
+         </image>
+      </ImageView>
+         <ImageView fitHeight="98.0" fitWidth="101.0" layoutX="2.0" layoutY="4.0">
+            <image>
+               <Image url="com/ethan0pia/bots/SlayerBot/ui/Icon.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="98.0" fitWidth="101.0" layoutX="501.0" layoutY="2.0">
+            <image>
+               <Image url="com/ethan0pia/bots/SlayerBot/ui/Icon.png" />
+            </image>
+         </ImageView>
+   </children>
+</AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</fx:root>

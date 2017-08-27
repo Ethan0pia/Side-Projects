@@ -1,0 +1,29 @@
+<manifest>
+  <main-class>com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot</main-class>
+  <name>OpiaSlayer</name>
+  <tag-line>Does Slayer Tasks</tag-line>
+  <description>Completes slayer tasks and gets another task</description>
+  <version>0.1</version>
+  <compatibility>
+    <game-type>RS3</game-type>
+  </compatibility>
+  <categories>
+    <category>COMBAT</category>
+  </categories>
+  <!--Required to publish on the bot store-->
+  <internal-id>CowKillerTanner</internal-id>
+  <!--The rest are optional-->
+  <open-source>false</open-source>
+  <hidden>false</hidden>
+  <!--If you need to hide it from the bot store for maintenance-->
+  <access>public</access>
+  <tags>
+    <tag>cows</tag>
+  </tags>
+  <resources>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/Icon.png</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/SlayerFXGUI.fxml</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/SlayerUI.fxml</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/SlayerMobs.json</resource>
+  </resources>
+</manifest>

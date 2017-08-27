@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="604.0" type="javafx.scene.layout.GridPane" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="654.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Accordion layoutY="153.0" prefHeight="397.0" prefWidth="600.0">
+        <panes>
+          <TitledPane animated="false" prefHeight="375.0" prefWidth="600.0" text="Basic Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="48.0" layoutY="120.0" prefHeight="34.0" prefWidth="110.0" text="Melee Bar:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="181.0" prefHeight="34.0" prefWidth="125.0" text="Ranged Bar:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="243.0" prefHeight="34.0" prefWidth="110.0" text="Magic Bar:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="MeleeBar" fx:id="MeleeBar" layoutX="160.0" layoutY="122.0" prefHeight="31.0" prefWidth="57.0" />
+                        <ComboBox id="RangedBar" fx:id="RangedBar" layoutX="160.0" layoutY="182.0" prefHeight="31.0" prefWidth="57.0" />
+                        <ComboBox id="MagicBar" fx:id="MagicBar" layoutX="160.0" layoutY="244.0" prefHeight="31.0" prefWidth="57.0" />
+                        <Label layoutX="169.0" layoutY="12.0" prefHeight="34.0" prefWidth="63.0" text="Food:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="Food" fx:id="Food" layoutX="245.0" layoutY="14.0" prefWidth="150.0" />
+                        <Label layoutX="339.0" layoutY="127.0" prefHeight="34.0" prefWidth="143.0" text="Melee Preset:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="MeleePreset" fx:id="MeleePreset" layoutX="484.0" layoutY="128.0" prefHeight="31.0" prefWidth="57.0" />
+                        <Label layoutX="325.0" layoutY="184.0" prefHeight="34.0" prefWidth="158.0" text="Ranged Preset:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="RangedPreset" fx:id="RangedPreset" layoutX="485.0" layoutY="186.0" prefHeight="31.0" prefWidth="57.0" />
+                        <Label layoutX="342.0" layoutY="244.0" prefHeight="34.0" prefWidth="143.0" text="Magic Preset:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="MagicPreset" fx:id="MagicPreset" layoutX="484.0" layoutY="246.0" prefHeight="31.0" prefWidth="57.0" />
+                        <Label layoutX="33.0" layoutY="73.0" prefHeight="38.0" prefWidth="175.0" text="Combat Bars:">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="352.0" layoutY="73.0" prefHeight="38.0" prefWidth="175.0" text="Bank Presets:">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Advanced Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="14.0" prefHeight="25.0" prefWidth="79.0" text="Monster:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="111.0" layoutY="15.0" prefHeight="26.0" prefWidth="124.0" text="Combat Type:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="259.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" text="Combat Bar:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="446.0" layoutY="15.0" prefHeight="25.0" prefWidth="49.0" text="Gear:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="-2.0" prefHeight="53.0" prefWidth="600.0" text="Slayer" textFill="#f20000">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="46.0" prefHeight="10.0" prefWidth="600.0" text="By EthanOpia and Exaggerate" textFill="#f20000">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ComboBox id="SlayerMaster" fx:id="SlayerMaster" layoutX="298.0" layoutY="95.0" prefWidth="150.0" />
+      <Label layoutX="154.0" layoutY="95.0" prefHeight="31.0" prefWidth="134.0" text="Slayer Master:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ImageView layoutX="3.0" layoutY="2.0">
+         <image>
+            <Image url="com/ethan0pia/bots/SlayerBot/ui/Icon.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="498.0" layoutY="2.0">
+         <image>
+            <Image url="com/ethan0pia/bots/SlayerBot/ui/Icon.png" />
+         </image>
+      </ImageView>
+      <Button id="Start_BT" fx:id="Start_BT" layoutX="226.0" layoutY="573.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="124.0" text="Start" />
+      <ImageView layoutX="4.0" layoutY="572.0">
+         <image>
+            <Image url="com/ethan0pia/bots/SlayerBot/ui/Icon.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="497.0" layoutY="563.0">
+         <image>
+            <Image url="com/ethan0pia/bots/SlayerBot/ui/Icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
+   <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</fx:root>

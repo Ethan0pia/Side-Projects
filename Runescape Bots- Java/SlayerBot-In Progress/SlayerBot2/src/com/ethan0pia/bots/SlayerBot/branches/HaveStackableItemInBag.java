@@ -1,0 +1,31 @@
+package com.ethan0pia.bots.SlayerBot.branches;
+
+import com.runemate.game.api.script.framework.tree.BranchTask;
+import com.runemate.game.api.script.framework.tree.TreeTask;
+
+import com.ethan0pia.bots.SlayerBot.leaves.LootItem;
+
+/**
+ * NOTES:
+ * Checks bag for same stackable.
+ */
+public class HaveStackableItemInBag extends BranchTask {
+
+    private LootItem lootitem = new LootItem();
+    private InCombatAtMob incombatatmob = new InCombatAtMob();
+
+    @Override
+    public boolean validate() {
+        return false;
+    }
+
+    @Override
+    public TreeTask failureTask() {
+        return incombatatmob;
+    }
+
+    @Override
+    public TreeTask successTask() {
+        return lootitem;
+    }
+}

@@ -1,0 +1,1312 @@
+[
+    {
+      "name": "",
+      "index": 0,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 1,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Goblin",
+      "index": 2,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 3,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Giant spider",
+      "index": 4,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Chicken",
+      "index": 5,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Cow",
+      "index": 6,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Scorpion",
+      "index": 7,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 8,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Wolf",
+      "index": 9,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Zombie",
+      "index": 10,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Black bear",
+      "index": 11,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 12,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 13,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 14,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 15,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 16,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 17,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Troll",
+      "index": 18,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 19,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 20,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 21,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 22,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 23,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 24,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 25,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 26,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 27,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 28,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 29,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 30,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 31,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 32,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 33,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 34,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 35,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 36,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 37,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 38,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Crawling hand",
+      "index": 39,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 40,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 41,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 42,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 43,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 44,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 45,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 46,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 47,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 48,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 49,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 50,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 51,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 52,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 53,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 54,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 55,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 56,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 57,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 58,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 59,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 60,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 61,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 62,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 63,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 64,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 65,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 66,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 67,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 68,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 69,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 70,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 71,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 72,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 73,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 74,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 75,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 76,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 77,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 78,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 79,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 80,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 81,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 82,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 83,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 84,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 85,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 86,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 87,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 88,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 89,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 90,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 91,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 92,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 93,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 94,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 95,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 96,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 97,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 98,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 99,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 100,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 101,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 102,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 103,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 104,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 105,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 106,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 107,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 108,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 109,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 110,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "Gelatinous Abomination",
+      "index": 111,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 112,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 113,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 114,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 115,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 116,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 117,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 118,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 119,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 120,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 121,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 122,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 123,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 124,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 125,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 126,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 127,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 128,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 129,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    },
+    {
+      "name": "",
+      "index": 130,
+      "nW": [ 0, 0, 0 ],
+      "sE": [ 0, 0, 0 ],
+      "specialItem": "",
+      "gameObjects": [ "object name", "action" ],
+      "safeSpot": [ 0, 0, 0 ],
+      "path1": []
+    }
+ ]

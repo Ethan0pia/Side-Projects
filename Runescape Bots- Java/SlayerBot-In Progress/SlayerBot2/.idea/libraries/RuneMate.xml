@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="RuneMate">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/RuneMate.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/RuneMate.jar!/" />
+    </SOURCES>
+  </library>
+</component>
