@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -9,8 +10,14 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class CheckGround extends BranchTask {
 
-    private ItemWorthOverX itemworthoverx = new ItemWorthOverX();
-    private InCombatAtMob incombatatmob = new InCombatAtMob();
+    private GoodAssSlayerBot Bot;
+
+    public CheckGround(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private ItemWorthOverX itemworthoverx = new ItemWorthOverX(Bot);
+    private InCombatAtMob incombatatmob = new InCombatAtMob(Bot);
 
     @Override
     public boolean validate() {

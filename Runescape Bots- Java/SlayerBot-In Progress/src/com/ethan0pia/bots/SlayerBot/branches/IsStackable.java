@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -9,8 +10,14 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class IsStackable extends BranchTask {
 
-    private IsInventoryFullStackable isinventoryfullstackable = new IsInventoryFullStackable();
-    private InCombatAtMob incombatatmob = new InCombatAtMob();
+    private GoodAssSlayerBot Bot;
+
+    public IsStackable(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private IsInventoryFullStackable isinventoryfullstackable = new IsInventoryFullStackable(Bot);
+    private InCombatAtMob incombatatmob = new InCombatAtMob(Bot);
 
     @Override
     public boolean validate() {

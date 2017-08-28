@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
@@ -13,8 +14,14 @@ import com.ethan0pia.bots.SlayerBot.leaves.WalkMob;
  */
 public class IsBankOpenNoSpecialReq extends BranchTask {
 
-    private CloseBank closebank = new CloseBank();
-    private WalkMob walkmob = new WalkMob();
+    private GoodAssSlayerBot Bot;
+
+    public IsBankOpenNoSpecialReq(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private CloseBank closebank = new CloseBank(Bot);
+    private WalkMob walkmob = new WalkMob(Bot);
 
     @Override
     public boolean validate() {

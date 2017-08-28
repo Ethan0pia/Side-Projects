@@ -1,8 +1,8 @@
 <manifest>
-  <main-class>com.ethan0pia.bots.CowKiller.main</main-class>
-  <name>Cow Killer and Tanner</name>
-  <tag-line>Kills cows and makes hard leather.</tag-line>
-  <description>Kills cows in Taverly and tans them into hard leather</description>
+  <main-class>com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot</main-class>
+  <name>OpiaSlayer</name>
+  <tag-line>Does Slayer Tasks</tag-line>
+  <description>Completes slayer tasks and gets another task</description>
   <version>0.1</version>
   <compatibility>
     <game-type>RS3</game-type>
@@ -21,5 +21,9 @@
     <tag>cows</tag>
   </tags>
   <resources>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/Icon.png</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/SlayerFXGUI.fxml</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/SlayerUI.fxml</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/SlayerMobs.json</resource>
   </resources>
 </manifest>

@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.region.Players;
@@ -12,8 +13,14 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class AtBank extends BranchTask {
 
-    private IsBankOpenNoSpecialReq isbankopennospecialreq = new IsBankOpenNoSpecialReq();
-    private AtMonster atmonster = new AtMonster();
+    private GoodAssSlayerBot Bot;
+
+    public AtBank(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private IsBankOpenNoSpecialReq isbankopennospecialreq = new IsBankOpenNoSpecialReq(Bot);
+    private AtMonster atmonster = new AtMonster(Bot);
 
     private Coordinate bankArea = new Coordinate(2888,3535,0);
     private Player player;

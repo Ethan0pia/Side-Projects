@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
@@ -13,8 +14,14 @@ import com.ethan0pia.bots.SlayerBot.leaves.WithdrawSpecialItemNotEquipable;
  */
 public class IsInventoryFullSpecialItemNotEquipable extends BranchTask {
 
-    private DepositOneFood depositonefood = new DepositOneFood();
-    private WithdrawSpecialItemNotEquipable withdrawspecialitemnotequipable = new WithdrawSpecialItemNotEquipable();
+    private GoodAssSlayerBot Bot;
+
+    public IsInventoryFullSpecialItemNotEquipable(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private DepositOneFood depositonefood = new DepositOneFood(Bot);
+    private WithdrawSpecialItemNotEquipable withdrawspecialitemnotequipable = new WithdrawSpecialItemNotEquipable(Bot);
 
     @Override
     public boolean validate() {

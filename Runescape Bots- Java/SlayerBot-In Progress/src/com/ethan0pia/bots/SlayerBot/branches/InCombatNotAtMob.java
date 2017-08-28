@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -12,8 +13,14 @@ import com.ethan0pia.bots.SlayerBot.leaves.WalkMob;
  */
 public class InCombatNotAtMob extends BranchTask {
 
-    private SafeSpot safespot = new SafeSpot();
-    private WalkMob walkmob = new WalkMob();
+    private GoodAssSlayerBot Bot;
+
+    public InCombatNotAtMob(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private SafeSpot safespot = new SafeSpot(Bot);
+    private WalkMob walkmob = new WalkMob(Bot);
 
     @Override
     public boolean validate() {

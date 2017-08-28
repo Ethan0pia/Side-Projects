@@ -1,6 +1,8 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.entities.Player;
+import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.BranchTask;
@@ -14,18 +16,22 @@ import com.ethan0pia.bots.SlayerBot.leaves.GetTask;
  */
 public class AtMaster extends BranchTask {
 
-    private GetTask gettask = new GetTask();
-    private InCombatMaster incombatmaster = new InCombatMaster();
+    private GoodAssSlayerBot Bot;
 
-    private Coordinate slayerMasterArea= new Coordinate(2911,3422,0);;
-    private Player player;
+    public AtMaster(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private GetTask gettask = new GetTask(Bot);
+    private InCombatMaster incombatmaster = new InCombatMaster(Bot);
 
     @Override
     public boolean validate() {
-        player = Players.getLocal();
+        Area slayerMasterArea= Bot.mobList.masters(Bot.master);
+        Player player = Players.getLocal();
         if(player !=null) {
             if(slayerMasterArea!=null) {
-                if (player.distanceTo(slayerMasterArea) < 6) {
+                if (slayerMasterArea.contains(player)) {
                     return true;
                 } else {
                     return false;

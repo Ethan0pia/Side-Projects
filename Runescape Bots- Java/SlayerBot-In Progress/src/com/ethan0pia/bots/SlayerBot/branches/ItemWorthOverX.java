@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -9,12 +10,29 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class ItemWorthOverX extends BranchTask {
 
-    private IsInventoryFullLooting isinventoryfulllooting = new IsInventoryFullLooting();
-    private IsStackable isstackable = new IsStackable();
+    private GoodAssSlayerBot Bot;
+
+    public ItemWorthOverX(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private IsInventoryFullLooting isinventoryfulllooting = new IsInventoryFullLooting(Bot);
+    private IsStackable isstackable = new IsStackable(Bot);
 
     @Override
     public boolean validate() {
+
+	    List<GroundItem> list = GroundItems.getLoaded().asList();
+        for(GroundItem i : list) {
+            if (ItemDefinition.get(i.getId()).isTradeable()|| ItemDefinition.get(i.getId()).isNoted()||ItemDefinition.get(i.getId()).stacks()) {
+                int price = GrandExchange.lookup(i.getId()).getPrice();
+                if(price > Bot.minVal || ItemDefinition.get(i.getId()).isNoted()||ItemDefinition.get(i.getId()).stacks()){
+                    return true;
+                }
+            }
+        }
         return false;
+
     }
 
     @Override

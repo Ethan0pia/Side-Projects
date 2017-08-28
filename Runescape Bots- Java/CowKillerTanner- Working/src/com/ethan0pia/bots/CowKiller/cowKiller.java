@@ -77,7 +77,7 @@ public class cowKiller extends TreeBot implements InventoryListener, EmbeddableU
             int rate = (int) CommonMath.rate(TimeUnit.HOURS, stopWatch.getRuntime(), hideCount);
             String runTime = stopWatch.getRuntimeAsString();
 
-            if(runTime != null) {
+            if(runTime != null && infoUI!=null) {
                 infoUI.update(rate, hideCount, runTime, leatherPrice);
             }
             // Assign all values to a new instance of the Info class

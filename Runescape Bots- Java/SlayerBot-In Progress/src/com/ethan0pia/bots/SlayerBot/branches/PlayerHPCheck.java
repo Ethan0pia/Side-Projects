@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.BranchTask;
@@ -13,8 +14,14 @@ import com.ethan0pia.bots.SlayerBot.leaves.EatFood;
  */
 public class PlayerHPCheck extends BranchTask {
 
-    private EatFood eatfood = new EatFood();
-    private RequiresBlow requiresblow = new RequiresBlow();
+    private GoodAssSlayerBot Bot;
+
+    public PlayerHPCheck(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private EatFood eatfood = new EatFood(Bot);
+    private RequiresBlow requiresblow = new RequiresBlow(Bot);
     private Player player;
 
     @Override

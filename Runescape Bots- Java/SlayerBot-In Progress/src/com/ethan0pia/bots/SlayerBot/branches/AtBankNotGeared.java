@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.region.Players;
@@ -14,8 +15,14 @@ import static sun.audio.AudioPlayer.player;
  */
 public class AtBankNotGeared extends BranchTask {
 
-    private IsBankOpenNotGeared isbankopennotgeared = new IsBankOpenNotGeared();
-    private InCombatNotGeared incombatnotgeared = new InCombatNotGeared();
+    private GoodAssSlayerBot Bot;
+
+    public AtBankNotGeared(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private IsBankOpenNotGeared isbankopennotgeared = new IsBankOpenNotGeared(Bot);
+    private InCombatNotGeared incombatnotgeared = new InCombatNotGeared(Bot);
 
     private Coordinate bankArea = new Coordinate(2888,3535,0);
     private Player player;

@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.local.Varbits;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
@@ -12,9 +13,14 @@ Add children of this branch using the settings to the right.
  */
 public class HaveTask extends BranchTask {
 
-    private IsGeared isgeared = new IsGeared();
-    private AtMaster atmaster = new AtMaster();
+    private GoodAssSlayerBot Bot;
 
+    public HaveTask(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private IsGeared isgeared = new IsGeared(Bot);
+    private AtMaster atmaster = new AtMaster(Bot);
 
     @Override
     public boolean validate() {

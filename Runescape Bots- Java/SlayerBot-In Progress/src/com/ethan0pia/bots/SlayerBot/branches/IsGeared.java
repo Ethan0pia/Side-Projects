@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -9,8 +10,14 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class IsGeared extends BranchTask {
 
-    private RequiresSpecialItem requiresspecialitem = new RequiresSpecialItem();
-    private AtBankNotGeared atbanknotgeared = new AtBankNotGeared();
+    private GoodAssSlayerBot Bot;
+
+    public IsGeared(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private RequiresSpecialItem requiresspecialitem = new RequiresSpecialItem(Bot);
+    private AtBankNotGeared atbanknotgeared = new AtBankNotGeared(Bot);
 
     @Override
     public boolean validate() {

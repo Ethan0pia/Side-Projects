@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.leaves;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.location.navigation.Traversal;
@@ -12,6 +13,12 @@ import com.runemate.game.api.script.framework.tree.LeafTask;
  * Walks to slayer master.
  */
 public class WalkMaster extends LeafTask {
+
+    private GoodAssSlayerBot Bot;
+
+    public WalkMaster(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
 
     //change coords to reflect which master
     private Coordinate master = new Coordinate(2888,3535,0);

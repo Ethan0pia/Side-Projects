@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -11,8 +12,14 @@ import com.ethan0pia.bots.SlayerBot.leaves.EquipSpecialItem;
  */
 public class IsSpecialEquipable extends BranchTask {
 
-    private EquipSpecialItem equipspecialitem = new EquipSpecialItem();
-    private IsInventoryFullSpecialItemNotEquipable isinventoryfullspecialitemnotequipable = new IsInventoryFullSpecialItemNotEquipable();
+    private GoodAssSlayerBot Bot;
+
+    public IsSpecialEquipable(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private EquipSpecialItem equipspecialitem = new EquipSpecialItem(Bot);
+    private IsInventoryFullSpecialItemNotEquipable isinventoryfullspecialitemnotequipable = new IsInventoryFullSpecialItemNotEquipable(Bot);
 
     @Override
     public boolean validate() {

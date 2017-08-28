@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
@@ -13,8 +14,14 @@ import com.ethan0pia.bots.SlayerBot.leaves.LootItem;
  */
 public class IsInventoryFullLooting extends BranchTask {
 
-    private EatFood eatfood = new EatFood();
-    private LootItem lootitem = new LootItem();
+    private GoodAssSlayerBot Bot;
+
+    public IsInventoryFullLooting(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private EatFood eatfood = new EatFood(Bot);
+    private LootItem lootitem = new LootItem(Bot);
 
     @Override
     public boolean validate() {

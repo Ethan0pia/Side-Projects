@@ -1,5 +1,6 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
+import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -11,8 +12,14 @@ import com.ethan0pia.bots.SlayerBot.leaves.LootItem;
  */
 public class HaveStackableItemInBag extends BranchTask {
 
-    private LootItem lootitem = new LootItem();
-    private InCombatAtMob incombatatmob = new InCombatAtMob();
+    private GoodAssSlayerBot Bot;
+
+    public HaveStackableItemInBag(GoodAssSlayerBot bot){
+        Bot=bot;
+    }
+
+    private LootItem lootitem = new LootItem(Bot);
+    private InCombatAtMob incombatatmob = new InCombatAtMob(Bot);
 
     @Override
     public boolean validate() {
