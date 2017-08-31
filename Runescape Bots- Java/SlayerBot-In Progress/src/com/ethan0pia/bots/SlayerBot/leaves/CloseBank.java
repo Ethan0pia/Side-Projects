@@ -5,7 +5,7 @@ import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 import com.runemate.game.api.script.framework.tree.LeafTask;
 
 /**
- * NOTES:done
+ * NOTES: done
  * 
  */
 public class CloseBank extends LeafTask {

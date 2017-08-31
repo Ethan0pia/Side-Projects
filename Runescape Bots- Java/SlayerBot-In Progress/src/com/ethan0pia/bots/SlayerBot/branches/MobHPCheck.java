@@ -10,7 +10,7 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
 import com.ethan0pia.bots.SlayerBot.leaves.KillingBlow;
 
 /**
- * NOTES:
+ * NOTES: done
  * Is monster's HP below 10%?
  */
 public class MobHPCheck extends BranchTask {
@@ -19,23 +19,17 @@ public class MobHPCheck extends BranchTask {
 
     public MobHPCheck(GoodAssSlayerBot bot){
         Bot=bot;
+        killingblow = new KillingBlow(Bot);
     }
 
-    private KillingBlow killingblow = new KillingBlow(Bot);
+    private KillingBlow killingblow;
 	private EmptyLeaf empty = new EmptyLeaf();
 
     @Override
     public boolean validate() {
-        Player player = Players.getLocal();
-        if(player != null){
-            if(player.getTarget().getHealthGauge().getPercent()<10){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-        return false;
+
+        return (Bot.player != null && Bot.player.getTarget()!=null && Bot.player.getTarget().getHealthGauge().getPercent()<10);
+
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
 /**
- * NOTES:
+ * NOTES: done
  * Does the monster require a special item to kill.
  */
 public class RequiresSpecialItem extends BranchTask {
@@ -15,21 +15,18 @@ public class RequiresSpecialItem extends BranchTask {
 
     public RequiresSpecialItem(GoodAssSlayerBot bot){
         Bot=bot;
+        hasspecialitem = new HasSpecialItem(Bot);
+        atbank = new AtBank(Bot);
     }
 
-    private HasSpecialItem hasspecialitem = new HasSpecialItem(Bot);
-    private AtBank atbank = new AtBank(Bot);
+    private HasSpecialItem hasspecialitem;
+    private AtBank atbank;
 
     @Override
     public boolean validate() {
 
         int task = Varbits.load(7923).getValue();
-        if(Bot.mobList.getSpecialItem(task)==null){
-            return false;
-        }
-        else{
-            return true;
-        }
+        return Bot.mobList.getSpecialItem(task)!=null;
     }
 
     @Override

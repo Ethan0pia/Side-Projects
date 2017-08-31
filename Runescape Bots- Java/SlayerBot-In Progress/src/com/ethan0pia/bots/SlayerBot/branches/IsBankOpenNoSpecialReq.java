@@ -18,19 +18,16 @@ public class IsBankOpenNoSpecialReq extends BranchTask {
 
     public IsBankOpenNoSpecialReq(GoodAssSlayerBot bot){
         Bot=bot;
+        closebank = new CloseBank(Bot);
+        walkmob = new WalkMob(Bot);
     }
 
-    private CloseBank closebank = new CloseBank(Bot);
-    private WalkMob walkmob = new WalkMob(Bot);
+    private CloseBank closebank;
+    private WalkMob walkmob;
 
     @Override
     public boolean validate() {
-        if(Bank.isOpen()){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return Bank.isOpen();
     }
 
     @Override

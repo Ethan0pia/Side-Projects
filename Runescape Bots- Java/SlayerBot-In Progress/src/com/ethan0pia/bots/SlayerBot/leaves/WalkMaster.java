@@ -9,7 +9,7 @@ import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.LeafTask;
 
 /**
- * NOTES:
+ * NOTES: done
  * Walks to slayer master.
  */
 public class WalkMaster extends LeafTask {
@@ -21,15 +21,15 @@ public class WalkMaster extends LeafTask {
     }
 
     //change coords to reflect which master
-    private Coordinate master = new Coordinate(2888,3535,0);
     private Player player;
 
     @Override
     public void execute() {
+        System.out.println("fuck13!");
         player = Players.getLocal();
         if(player !=null) {
             if (!player.isMoving()) {
-                final WebPath path = Traversal.getDefaultWeb().getPathBuilder().buildTo(master);
+                final WebPath path = Traversal.getDefaultWeb().getPathBuilder().buildTo(Bot.slayerMasterCoords);
                 if (path != null) {
                     path.step(true);
                 }

@@ -43,11 +43,11 @@ public class SlayerUI extends GridPane implements Initializable {
 
     private int tasksComplete, totalGP, gph, attLvl, attXPGain, attGain,slayLvl,slayXPGain,slayGain,strLvl,strXPGain,strGain,defLvl,defXPGain,
             defGain,magicLvl, magicXPGain,magicGain,rangeLvl,rangeXPGain,rangeGain,hpLvl,hpXPGain,hpGain,prayLvl,prayXPGain,prayGain, monstersLeft;
-    private String runTime, currentTask;
+    private String currentTask;
 
     private double hpToLvl, slayToLvl, attToLvl, strToLvl, defToLvl, rangeToLvl, mageToLvl, prayToLvl;
 
-    public SlayerUI(GoodAssSlayerBot bot, String master) {
+    public SlayerUI(GoodAssSlayerBot bot) {
         this.bot = bot;
         tasksComplete= totalGP= gph= attXPGain= attGain=slayXPGain=slayGain=strXPGain=strGain=defXPGain=
                 defGain= magicXPGain=magicGain=rangeXPGain=rangeGain=hpXPGain=hpGain=prayXPGain=prayGain=monstersLeft=0;
@@ -87,7 +87,7 @@ public class SlayerUI extends GridPane implements Initializable {
     }
 
     public void update1(int tasksComplete, int totalGP, int gph, int attLvl, int attXPGain, int slayLvl, int slayXPGain, int strLvl, int strXPGain, int defLvl, int defXPGain
-            , int magicLvl, int magicXPGain, int rangeLvl, int rangeXPGain, int hpLvl, int hpXPGain, int prayLvl, int prayXPGain, String runTime, String currentTask,
+            , int magicLvl, int magicXPGain, int rangeLvl, int rangeXPGain, int hpLvl, int hpXPGain, int prayLvl, int prayXPGain, String currentTask,
                         double hpToLvl, double slayToLvl, double attToLvl, double strToLvl, double defToLvl, double rangeToLvl, double mageToLvl, double prayToLvl) {
 
         this.attLvl=attLvl;
@@ -110,7 +110,6 @@ public class SlayerUI extends GridPane implements Initializable {
         this.hpXPGain=hpXPGain;
         this.prayXPGain=prayXPGain;
 
-        this.runTime = runTime;
         this.currentTask = currentTask;
 
         this.hpToLvl=hpToLvl;
@@ -134,7 +133,6 @@ public class SlayerUI extends GridPane implements Initializable {
 
             uiSlayerMaster.textProperty().set(bot.master);
             uiTasksCompleted.textProperty().set("" + tasksComplete);
-            uiRunetime.textProperty().set(runTime);
             uiCurrentTask.textProperty().set(currentTask);
 
             uiTotalGP.textProperty().set("" + totalGP);
@@ -186,6 +184,11 @@ public class SlayerUI extends GridPane implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public void update3(String runTime){
+
+        uiRunetime.textProperty().set(runTime);
     }
 
 }

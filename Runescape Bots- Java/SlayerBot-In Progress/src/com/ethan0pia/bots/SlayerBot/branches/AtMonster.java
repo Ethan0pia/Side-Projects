@@ -1,15 +1,13 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
 import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
-import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.local.Varbits;
 import com.runemate.game.api.hybrid.location.Area;
-import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
 /**
- * NOTES:
+ * NOTES: done
  * Am I at the monster's location.
  */
 public class AtMonster extends BranchTask {
@@ -18,22 +16,19 @@ public class AtMonster extends BranchTask {
 
     public AtMonster(GoodAssSlayerBot bot){
         Bot=bot;
+        checkground = new CheckGround(Bot);
+        incombatnotatmob = new InCombatNotAtMob(Bot);
     }
 
-    private CheckGround checkground = new CheckGround(Bot);
-    private InCombatNotAtMob incombatnotatmob = new InCombatNotAtMob(Bot);
+    private CheckGround checkground;
+    private InCombatNotAtMob incombatnotatmob;
 
     @Override
     public boolean validate() {
         int task = Varbits.load(7923).getValue();
-        Player player = Players.getLocal();
         Area monsterArea = Bot.mobList.getMobArea(task);
-        if(monsterArea != null && player!=null && monsterArea.contains(player)){
-            return true;
-        }
-        else{
-            return false;
-        }
+
+        return monsterArea != null && Bot.player!=null && monsterArea.contains(Bot.player);
     }
 
     @Override

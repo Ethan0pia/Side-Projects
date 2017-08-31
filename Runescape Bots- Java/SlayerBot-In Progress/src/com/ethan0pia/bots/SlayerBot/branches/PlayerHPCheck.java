@@ -2,6 +2,7 @@ package com.ethan0pia.bots.SlayerBot.branches;
 
 import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.hybrid.entities.Player;
+import com.runemate.game.api.hybrid.local.hud.interfaces.Health;
 import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
@@ -18,24 +19,16 @@ public class PlayerHPCheck extends BranchTask {
 
     public PlayerHPCheck(GoodAssSlayerBot bot){
         Bot=bot;
+        eatfood = new EatFood(Bot);
+        requiresblow = new RequiresBlow(Bot);
     }
 
-    private EatFood eatfood = new EatFood(Bot);
-    private RequiresBlow requiresblow = new RequiresBlow(Bot);
-    private Player player;
+    private EatFood eatfood;
+    private RequiresBlow requiresblow;
 
     @Override
     public boolean validate() {
-        player= Players.getLocal();
-        if(player!=null){
-            if(player.getHealthGauge().getPercent()<30){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-        return false;
+        return Bot.player!=null && Health.getCurrentPercent()<50;
     }
 
     @Override

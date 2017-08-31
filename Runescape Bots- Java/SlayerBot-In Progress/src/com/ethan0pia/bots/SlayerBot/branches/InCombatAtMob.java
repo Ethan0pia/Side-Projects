@@ -1,15 +1,15 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
 import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
-import com.runemate.game.api.hybrid.entities.Player;
-import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
 import com.ethan0pia.bots.SlayerBot.leaves.AttackMob;
 
+import java.util.List;
+
 /**
- * NOTES:
+ * NOTES: done
  * 
  */
 public class InCombatAtMob extends BranchTask {
@@ -18,27 +18,34 @@ public class InCombatAtMob extends BranchTask {
 
     public InCombatAtMob(GoodAssSlayerBot bot){
         Bot=bot;
+        playerhpcheck = new PlayerHPCheck(Bot);
+        attackmob = new AttackMob(Bot);
     }
 
-    private PlayerHPCheck playerhpcheck = new PlayerHPCheck(Bot);
-    private AttackMob attackmob = new AttackMob(Bot);
+    private PlayerHPCheck playerhpcheck;
+    private AttackMob attackmob;
 
     @Override
     public boolean validate() {
-        Player player = Players.getLocal();
-        if(player!=null && player.getHealthGauge()==null){
-            return true;
+        if(Bot.player!=null) {
+            boolean state = false;
+            try{
+                state = Bot.player.getTarget()==null || Bot.player.getTarget().getHealthGauge()==null || Bot.player.getTarget().getHealthGauge().getPercent()<1;
+            }catch(Exception e){
+                System.out.println("Failed to check if in combat.");
+            }
+            return state;
         }
-        return false;
+        return true;
     }
 
     @Override
     public TreeTask failureTask() {
-        return attackmob;
+        return playerhpcheck;
     }
 
     @Override
     public TreeTask successTask() {
-        return playerhpcheck;
+        return attackmob;
     }
 }

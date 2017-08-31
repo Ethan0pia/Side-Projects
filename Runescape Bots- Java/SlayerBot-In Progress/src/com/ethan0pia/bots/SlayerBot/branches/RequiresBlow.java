@@ -7,7 +7,7 @@ import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
 /**
- * NOTES:
+ * NOTES: done
  * Does monster require a killing blow.
  */
 public class RequiresBlow extends BranchTask {
@@ -16,21 +16,18 @@ public class RequiresBlow extends BranchTask {
 
     public RequiresBlow(GoodAssSlayerBot bot){
         Bot=bot;
+        mobhpcheck = new MobHPCheck(Bot);
     }
 
-    private MobHPCheck mobhpcheck = new MobHPCheck(Bot);
+    private MobHPCheck mobhpcheck;
 	private EmptyLeaf empty = new EmptyLeaf();
 
     @Override
     public boolean validate() {
 
         int task = Varbits.load(7923).getValue();
-        if(Bot.mobList.getFinishingBlowName(task)==null){
-            return false;
-        }
-        else{
-            return true;
-        }
+
+        return Bot.mobList.getFinishingBlowName(task)!=null;
     }
 
     @Override

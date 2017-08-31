@@ -16,19 +16,16 @@ public class IsBankOpenSpecialNeeded extends BranchTask {
 
     public IsBankOpenSpecialNeeded(GoodAssSlayerBot bot){
         Bot=bot;
+        openbank = new OpenBank(Bot);
+        doesbankcontainspecialitem = new DoesBankContainSpecialItem(Bot);
     }
 
-    private DoesBankContainSpecialItem doesbankcontainspecialitem = new DoesBankContainSpecialItem(Bot);
-    private OpenBank openbank = new OpenBank(Bot);
+    private DoesBankContainSpecialItem doesbankcontainspecialitem;
+    private OpenBank openbank;
 
     @Override
     public boolean validate() {
-        if(Bank.isOpen()){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return Bank.isOpen();
     }
 
     @Override

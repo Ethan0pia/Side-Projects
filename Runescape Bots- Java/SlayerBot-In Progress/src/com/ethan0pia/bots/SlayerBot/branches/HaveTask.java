@@ -15,21 +15,20 @@ public class HaveTask extends BranchTask {
 
     private GoodAssSlayerBot Bot;
 
+    private IsGeared isgeared;
+    private AtMaster atmaster;
+
     public HaveTask(GoodAssSlayerBot bot){
-        Bot=bot;
+        this.Bot=bot;
+        isgeared = new IsGeared(bot);
+        atmaster = new AtMaster(bot);
+
     }
 
-    private IsGeared isgeared = new IsGeared(Bot);
-    private AtMaster atmaster = new AtMaster(Bot);
 
     @Override
     public boolean validate() {
-        if(Varbits.load(7917).getValue()==0){
-            return false;
-        }
-        else{
-            return true;
-        }
+        return Varbits.load(7917).getValue()!=0;
     }
 
     @Override

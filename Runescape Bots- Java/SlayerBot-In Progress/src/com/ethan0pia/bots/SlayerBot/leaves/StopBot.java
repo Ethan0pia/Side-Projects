@@ -4,7 +4,7 @@ import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
 import com.runemate.game.api.script.framework.tree.LeafTask;
 
 /**
- * NOTES:
+ * NOTES: done
  * Stops the bot.
  */
 public class StopBot extends LeafTask {
@@ -17,6 +17,6 @@ public class StopBot extends LeafTask {
 
     @Override
     public void execute() {
-
+        Bot.stop();
     }
 }

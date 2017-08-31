@@ -5,7 +5,7 @@ import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 import com.runemate.game.api.script.framework.tree.LeafTask;
 
 /**
- * NOTES:
+ * NOTES: done
  * Deposits one food to make room for special item.
  */
 public class DepositOneFood extends LeafTask {

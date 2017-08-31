@@ -5,7 +5,6 @@ import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
-import com.ethan0pia.bots.SlayerBot.leaves.LoadPreset;
 import com.ethan0pia.bots.SlayerBot.leaves.OpenBank;
 
 /**
@@ -18,19 +17,16 @@ public class IsBankOpenNotGeared extends BranchTask {
 
     public IsBankOpenNotGeared(GoodAssSlayerBot bot){
         Bot=bot;
+        inventoryEmpty = new IsInventoryEmpty(Bot);
+        openbank = new OpenBank(Bot);
     }
 
-    private LoadPreset loadpreset = new LoadPreset(Bot);
-    private OpenBank openbank = new OpenBank(Bot);
+    private IsInventoryEmpty inventoryEmpty;
+    private OpenBank openbank;
 
     @Override
     public boolean validate() {
-        if(Bank.isOpen()){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return Bank.isOpen();
     }
 
     @Override
@@ -40,6 +36,6 @@ public class IsBankOpenNotGeared extends BranchTask {
 
     @Override
     public TreeTask successTask() {
-        return loadpreset;
+        return inventoryEmpty;
     }
 }

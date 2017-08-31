@@ -1,13 +1,10 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
 import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
-import com.runemate.game.api.hybrid.entities.Player;
+import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
-import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
-
-import static sun.audio.AudioPlayer.player;
 
 /**
  * NOTES: done
@@ -19,25 +16,19 @@ public class AtBankNotGeared extends BranchTask {
 
     public AtBankNotGeared(GoodAssSlayerBot bot){
         Bot=bot;
+        isbankopennotgeared = new IsBankOpenNotGeared(Bot);
+        incombatnotgeared = new InCombatNotGeared(Bot);
     }
 
-    private IsBankOpenNotGeared isbankopennotgeared = new IsBankOpenNotGeared(Bot);
-    private InCombatNotGeared incombatnotgeared = new InCombatNotGeared(Bot);
+    private IsBankOpenNotGeared isbankopennotgeared;
+    private InCombatNotGeared incombatnotgeared;
 
-    private Coordinate bankArea = new Coordinate(2888,3535,0);
-    private Player player;
+    private Area bankArea = new Area.Rectangular( new Coordinate(2885,3538,0), new Coordinate(2893, 3534, 0));
 
     @Override
     public boolean validate() {
-        player = Players.getLocal();
-        if(player !=null) {
-            if (player.distanceTo(bankArea) < 10) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-        return false;
+
+        return Bot.player !=null && bankArea.contains(Bot.player) || new Area.Circular(new Coordinate(3449, 3717, 0), 40).contains(Bot.player);
     }
 
     @Override

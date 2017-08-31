@@ -18,19 +18,16 @@ public class IsInventoryFullSpecialItemNotEquipable extends BranchTask {
 
     public IsInventoryFullSpecialItemNotEquipable(GoodAssSlayerBot bot){
         Bot=bot;
+        depositonefood = new DepositOneFood(Bot);
+        withdrawspecialitemnotequipable = new WithdrawSpecialItemNotEquipable(Bot);
     }
 
-    private DepositOneFood depositonefood = new DepositOneFood(Bot);
-    private WithdrawSpecialItemNotEquipable withdrawspecialitemnotequipable = new WithdrawSpecialItemNotEquipable(Bot);
+    private DepositOneFood depositonefood;
+    private WithdrawSpecialItemNotEquipable withdrawspecialitemnotequipable;
 
     @Override
     public boolean validate() {
-        if(Inventory.getEmptySlots()==0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return Inventory.isFull();
     }
 
     @Override

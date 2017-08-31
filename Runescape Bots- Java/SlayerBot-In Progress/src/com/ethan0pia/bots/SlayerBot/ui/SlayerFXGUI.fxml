@@ -40,12 +40,12 @@
                         <ComboBox id="MeleeBar" fx:id="MeleeBar" layoutX="160.0" layoutY="122.0" prefHeight="31.0" prefWidth="79.0" />
                         <ComboBox id="RangedBar" fx:id="RangedBar" layoutX="160.0" layoutY="182.0" prefHeight="31.0" prefWidth="79.0" />
                         <ComboBox id="MagicBar" fx:id="MagicBar" layoutX="160.0" layoutY="244.0" prefHeight="31.0" prefWidth="79.0" />
-                        <Label layoutX="169.0" layoutY="12.0" prefHeight="34.0" prefWidth="63.0" text="Food:">
+                        <Label layoutX="20.0" layoutY="14.0" prefHeight="34.0" prefWidth="63.0" text="Food:">
                            <font>
                               <Font size="23.0" />
                            </font>
                         </Label>
-                        <ComboBox id="Food" fx:id="Food" layoutX="245.0" layoutY="14.0" prefWidth="150.0" />
+                        <ComboBox id="Food" fx:id="Food" layoutX="96.0" layoutY="16.0" prefWidth="150.0" />
                         <Label layoutX="339.0" layoutY="127.0" prefHeight="34.0" prefWidth="143.0" text="Melee Preset:">
                            <font>
                               <Font size="23.0" />
@@ -74,6 +74,12 @@
                               <Font name="System Bold" size="26.0" />
                            </font>
                         </Label>
+                           <ComboBox id="Food" fx:id="MinVal" layoutX="427.0" layoutY="16.0" prefHeight="31.0" prefWidth="134.0" />
+                           <Label layoutX="316.0" prefHeight="68.0" prefWidth="111.0" text="Minimum Value &#10;     of Loot&#10;  (unstackable)">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
                      </children>
                   </AnchorPane>
             </content>

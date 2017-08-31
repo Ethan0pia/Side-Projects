@@ -1,11 +1,17 @@
 package com.ethan0pia.bots.SlayerBot.branches;
 
 import com.ethan0pia.bots.SlayerBot.GoodAssSlayerBot;
+import com.runemate.game.api.hybrid.entities.GroundItem;
+import com.runemate.game.api.hybrid.location.Area;
+import com.runemate.game.api.hybrid.region.GroundItems;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
+import java.util.LinkedHashMap;
+import java.util.List;
+
 /**
- * NOTES:
+ * NOTES: done
  * Are there items on the ground?
  */
 public class CheckGround extends BranchTask {
@@ -14,14 +20,22 @@ public class CheckGround extends BranchTask {
 
     public CheckGround(GoodAssSlayerBot bot){
         Bot=bot;
+        itemworthoverx = new ItemWorthOverX(bot, this);
+        incombatatmob = new InCombatAtMob(bot);
     }
 
-    private ItemWorthOverX itemworthoverx = new ItemWorthOverX(Bot);
-    private InCombatAtMob incombatatmob = new InCombatAtMob(Bot);
+    private ItemWorthOverX itemworthoverx;
+    private InCombatAtMob incombatatmob;
+    public List<GroundItem> list;
 
     @Override
     public boolean validate() {
-        return false;
+        if(Bot.player!=null) {
+            list = GroundItems.newQuery().within(new Area.Circular(Bot.player.getPosition(), 12)).reachable().results().asList();
+            return list!=null;
+        }
+
+       return false;
     }
 
     @Override

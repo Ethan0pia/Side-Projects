@@ -9,7 +9,7 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
 import com.ethan0pia.bots.SlayerBot.leaves.StopBot;
 
 /**
- * NOTES:
+ * NOTES: done
  * Checks bank for special item
  */
 public class DoesBankContainSpecialItem extends BranchTask {
@@ -18,10 +18,13 @@ public class DoesBankContainSpecialItem extends BranchTask {
 
     public DoesBankContainSpecialItem(GoodAssSlayerBot bot){
         Bot=bot;
+        isspecialequipable = new IsSpecialEquipable(Bot);
+        stopbot = new StopBot(Bot);
+
     }
 
-    private IsSpecialEquipable isspecialequipable = new IsSpecialEquipable(Bot);
-    private StopBot stopbot = new StopBot(Bot);
+    private IsSpecialEquipable isspecialequipable;
+    private StopBot stopbot;
 
     @Override
     public boolean validate() {
