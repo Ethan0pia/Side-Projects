@@ -1,0 +1,31 @@
+<manifest>
+  <main-class>com.ethan0pia.bots.DuelSlave.DuelingSlave</main-class>
+  <name>Duel Cap Plus</name>
+  <tag-line>Wins and loses duels.</tag-line>
+  <description>~85 duels per hour, 58 hours to cap.</description>
+  <version>0.1</version>
+  <compatibility>
+    <game-type>RS3</game-type>
+  </compatibility>
+  <categories>
+    <category>MINIGAMES</category>
+    <category>COMBAT</category>
+    <category>OTHER</category>
+  </categories>
+  <!--Required to publish on the bot store-->
+  <internal-id>DuelSlave</internal-id>
+  <!--The rest are optional-->
+  <open-source>false</open-source>
+  <hidden>false</hidden>
+  <!--If you need to hide it from the bot store for maintenance-->
+  <access>public</access>
+  <tags>
+    <tag>duel</tag>
+    <tag>combat</tag>
+      <tag>cap</tag>
+  </tags>
+  <price>0.10</price>
+  <resources>
+    <resource>com/ethan0pia/bots/DuelSlave/ui/DuelingUI.fxml</resource>
+  </resources>
+</manifest>

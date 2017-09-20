@@ -1,0 +1,44 @@
+<manifest>
+  <main-class>com.ethan0pia.bots.SlayerBot.OpiaSlayer</main-class>
+  <name>OpiaSlayer</name>
+  <tag-line>Does Slayer Tasks</tag-line>
+  <description>Completes slayer tasks and gets another task.</description>
+  <version>0.1</version>
+  <compatibility>
+    <game-type>RS3</game-type>
+  </compatibility>
+  <categories>
+      <category>SLAYER</category>
+      <category>MONEYMAKING</category>
+    <category>COMBAT</category>
+  </categories>
+  <!--Required to publish on the bot store-->
+  <internal-id>Ethan0piaSlayer</internal-id>
+  <!--The rest are optional-->
+  <open-source>false</open-source>
+  <hidden>false</hidden>
+  <!--If you need to hide it from the bot store for maintenance-->
+  <access>public</access>
+  <tags>
+    <tag>slayer</tag>
+    <tag>combat</tag>
+      <tag>money</tag>
+  </tags>
+  <resources>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/checkBoxes.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/comboBoxes.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/mobSettings.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset0.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset1.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset2.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset3.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset4.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset5.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset6.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset7.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset8.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/preset9.txt</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/Icon.png</resource>
+    <resource>com/ethan0pia/bots/SlayerBot/ui/SlayerUI.fxml</resource>
+  </resources>
+</manifest>

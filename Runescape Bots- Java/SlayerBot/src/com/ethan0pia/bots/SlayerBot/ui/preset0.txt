@@ -1,0 +1,16 @@
+Dragon helm
+Dragon chainbody
+Dragon platelegs
+Bandos boots
+Bandos gloves
+Obsidian cape
+Amulet of glory
+Ring of wealth
+Off-hand dragon longsword
+
+
+Dragon longsword
+12
+Lobster
+None
+1
