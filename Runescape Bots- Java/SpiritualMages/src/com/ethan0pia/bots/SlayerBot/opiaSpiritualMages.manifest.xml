@@ -1,0 +1,26 @@
+<manifest>
+    <main-class>com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages</main-class>
+    <name>OpiaSpiritualMages</name>
+    <tag-line>Slays Spiritual Mages</tag-line><!--Max of 50 chars-->
+    <description>Makes ~2m per hour</description><!--Max of 110 chars-->
+    <version>1.0.0</version>
+    <compatibility>
+        <game>RS3</game>
+    </compatibility>
+    <categories>
+        <category>MONEYMAKING</category>
+    </categories>
+    <!--Required to publish on the bot store-->
+    <internal-id>OpiaSpiritualMages</internal-id>
+    <!--The rest are optional-->
+    <open-source>false</open-source>
+    <hidden>false</hidden> <!--If you need to hide it from the bot store for maintenance-->
+    <access>public</access>
+    <tags>
+        <tag>Slayer</tag>
+        <tag>Slay</tag>
+    </tags>
+    <resources>
+        <resource>com/ethan0pia/bots/SlayerBot/ui/SlayerUI.fxml</resource>
+    </resources>
+</manifest>
