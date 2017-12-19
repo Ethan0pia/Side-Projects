@@ -1,0 +1,24 @@
+<manifest>
+    <main-class>com.ethan0pia.bots.f2pLeveler.F2pLeveler</main-class>
+    <name>Opia F2P Leveler</name>
+    <tag-line>levels f2p accounts</tag-line><!--Max of 50 chars-->
+    <description>Levels f2p accounts</description><!--Max of 110 chars-->
+    <version>1.0.0</version>
+    <compatibility>
+        <game>RS3</game>
+    </compatibility>
+    <categories>
+        <category>MONEYMAKING</category>
+        <category>SLAYER</category>
+    </categories>
+    <!--Required to publish on the bot store-->
+    <internal-id>OpiaF2pLvls</internal-id>
+    <!--The rest are optional-->
+    <open-source>false</open-source>
+    <hidden>false</hidden> <!--If you need to hide it from the bot store for maintenance-->
+    <access>public</access>
+    <tags>
+        <tag>Slayer</tag>
+        <tag>Gargoyles</tag>
+    </tags>
+</manifest>

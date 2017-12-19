@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" type="javafx.scene.layout.GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+
+</AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="87.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="502.0" minHeight="10.0" prefHeight="440.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="145.0" text="Current Magic Lvl:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="145.0" text="Magic Levels Gained:" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Runtime:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="magicLvl" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="1" />
+                  <Label fx:id="lvlGained" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="3" />
+                  <Label fx:id="runtime" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label alignment="CENTER" prefHeight="102.0" prefWidth="622.0" text="OpiaTelegrabLeveler" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua Bold" size="55.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="231.0" prefWidth="630.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Start almost anywhere. Have an empty inventory." GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Use revolution with basic magic abilities. Add 1 ranged ability to bar for best results." GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Kills Troll Shaman for air staff after getting free Chargebow from Burthorpe store." GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Kills Troll Brutes until magic level reaches 33, then the bot stops." GridPane.rowIndex="7" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Designed to be used with brand new accounts that were just created." GridPane.rowIndex="9" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Designed for creating new accounts for use with OpiaWineGrabber " GridPane.rowIndex="11" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</fx:root>
