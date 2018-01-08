@@ -131,9 +131,9 @@ var all =
     { "name": "Casper", "state": "WY", "distance": "130", "jobs1": 0, "jobs2": 0, "results1": 0, "results2": 0 }
 ];
 
-var id1 = 8011629222923375;
-var id2 = "152275";
-var id3 = "iUuTZLDTsWu";
+var id1 = "indeed api id";
+var id2 = "glassdoor api id";
+var id3 = "glassdoor api id password";
 
 var search1;
 var search2;
