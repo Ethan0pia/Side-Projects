@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Assignment 3!</h1>
+  <hr />
+  <button class="btn btn-primary" (click)="buttonWasClicked()">Display Details</button>
+  <p *ngIf="buttonClicked">Secret password = happyTuna</p>
+  <p
+     *ngFor="let element of arrClicks"
+     [ngStyle]="{backgroundColor: element > 4 ? 'blue' : 'white'}"
+     [ngClass]="{'white-text' : element > 4}"
+     >{{element}}</p>
+</div>
