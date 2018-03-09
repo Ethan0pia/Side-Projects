@@ -1,0 +1,8 @@
+<div class="container">
+  <h3>Assignment 2</h3>
+  <hr />
+  <label>Username:</label>
+  <input type="text" class="form-control" [(ngModel)]="username" />
+  <p>{{username}}</p>
+  <button class="btn btn-primary" [disabled]="username === ''" (click)="clickButton()">Add Username</button>
+</div>
