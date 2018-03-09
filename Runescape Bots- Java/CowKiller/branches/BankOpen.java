@@ -2,27 +2,28 @@ package com.ethan0pia.bots.CowKiller.branches;
 
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
-import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
+import com.ethan0pia.bots.CowKiller.leaves.closeBank;
+import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 
-public class InventoryFull extends BranchTask {
+public class BankOpen extends BranchTask {
 
-	private BankOpen bankOpn= new BankOpen();
-	private ContainsMeat containsMeat= new ContainsMeat();
+	private AtCows atCow= new AtCows();
+	private closeBank close= new closeBank();
 
 	@Override
 	public TreeTask successTask() {
-		return containsMeat;
+		return close;
 	}
 
 	@Override
 	public TreeTask failureTask() {
-		return bankOpn;
+		return atCow;
 	}
 
 	@Override
 	public boolean validate() {
-		//inventory full?
-		return Inventory.getEmptySlots()<1;
+		//is bank open?
+		return Bank.isOpen();
 	}
 
 }

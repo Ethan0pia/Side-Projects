@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" type="javafx.scene.layout.GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+
+</AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="87.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="502.0" minHeight="10.0" prefHeight="440.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="145.0" text="Hides Collected:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="145.0" text="GP Gained:" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Hides p/h:" GridPane.rowIndex="1" />
+                  <Label fx:id="hidesCollected" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="1" />
+                  <Label fx:id="gpGained" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="3" />
+                  <Label fx:id="runtime" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Runtime:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="ratePH" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="GP p/h:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="gpPH" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label alignment="CENTER" prefHeight="102.0" prefWidth="622.0" text="OpiaCowKiller" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua Bold" size="55.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="231.0" prefWidth="630.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Start almost anywhere." GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Use revolution with basic abilities if you want more gp." GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Use a basic weapon if you don't want to punch like a noob." GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Use magic for the most gp." GridPane.rowIndex="7" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="If using magic, make sure the first air spell is set to autocast." GridPane.rowIndex="9" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="If you have lvl 2+ crafting and want hard leather, make sure your money pouch has GP." GridPane.rowIndex="11" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</fx:root>
