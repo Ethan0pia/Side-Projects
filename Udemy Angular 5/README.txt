@@ -1,1 +1,0 @@
-This is my independent work for the Angular 5 Udemy course found here: https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/
