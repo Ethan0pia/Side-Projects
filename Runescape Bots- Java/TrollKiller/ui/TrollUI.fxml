@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" type="javafx.scene.layout.GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+
+</AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="66.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="502.0" minHeight="10.0" prefHeight="406.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Runtime:" />
+                  <Label fx:id="runtime" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Attack Lvl:" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Ranged Lvl:" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Magic Lvl:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="attack" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="3" />
+                  <Label fx:id="ranged" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="magic" alignment="CENTER" prefHeight="29.0" prefWidth="154.0" text="??" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Ranged Target:" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Attack Target:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="144.0" text="Magic Target:" GridPane.rowIndex="2" />
+                  <TextField fx:id="magicTarget" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="rangedTarget" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="attackTarget" prefHeight="31.0" prefWidth="126.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Label alignment="CENTER" prefHeight="102.0" prefWidth="622.0" text="OpiaTrollKiller" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua Bold" size="55.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="231.0" prefWidth="630.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Start in troll cave." GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Set 4 abilities for each combat style on revolution bar." GridPane.rowIndex="7" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Select the goal levels." GridPane.rowIndex="8" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Bot will hop worlds up to 5 times per skill to find an empty world." GridPane.rowIndex="9" />
+                  <Button fx:id="startButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="769.0" text="Start" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="The bot assumes you loot an air staff from the trolls that are weak to ranged." GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="If you set very few or no ranged levels, it won't loot an air staff." GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="If you want to only train magic, give it an air staff before starting." GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="621.0" text="Get a bronze sword, offhand bronze sword, and chargebow from free shop in Burthorpe." GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</fx:root>

@@ -20,6 +20,6 @@ public class OpenBank extends LeafTask {
     @Override
     public void execute() {
         Bank.open();
-        Execution.delayUntil(()->Bank.isOpen(),4000);
+        Execution.delayUntil(Bank::isOpen,4000);
     }
 }

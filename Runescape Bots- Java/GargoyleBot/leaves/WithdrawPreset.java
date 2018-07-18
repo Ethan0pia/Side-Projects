@@ -19,7 +19,7 @@ public class WithdrawPreset extends LeafTask {
 
     @Override
     public void execute() {
-        Bank.loadPreset(1);
+        Bank.loadPreset(bot.getBankPreset());
         Execution.delayUntil(()->!Bank.isOpen(),3000);
         if(!Bank.isOpen()){
             bot.setBankBool(false);

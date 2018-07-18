@@ -1,8 +1,9 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
-import com.ethan0pia.bots.SlayerBot.root.leaves.WalkBank;
-import com.ethan0pia.bots.SlayerBot.root.leaves.UseQuickTeleport;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.WalkBank;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.UseQuickTeleport;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.entities.Npc;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.hybrid.location.Area;
@@ -24,8 +25,8 @@ public class AmIInCombatNeedBank extends BranchTask {
 
     @Override
     public boolean validate() {
-        Npc attacking = Npcs.newQuery().targeting(bot.getPlayer()).actions("Attack").within(new Area.Circular(bot.getPlayer().getPosition(), 15)).results().nearest();
-        return attacking!=null && Inventory.contains(8010);
+        Npc attacking = Npcs.newQuery().targeting(bot.getPlayer()).actions("Attack").within(new Area.Circular(bot.getPlayer().getPosition(), 15)).filter(i->i.getTarget().equals(bot.getPlayer())).results().nearest();
+        return attacking!=null && Inventory.contains(bot.getTeleport());
     }
 
     @Override

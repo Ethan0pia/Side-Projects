@@ -4,11 +4,11 @@ import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 
-public class containsCowhide extends BranchTask {
+public class ContainsCowhide extends BranchTask {
 	
 
-	private atJack Jack= new atJack();
-	private atBank bank= new atBank();
+	private AtJack Jack= new AtJack();
+	private AtBank bank= new AtBank();
 
 	@Override
 	public TreeTask successTask() {

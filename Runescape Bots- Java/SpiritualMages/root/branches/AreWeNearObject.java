@@ -1,8 +1,9 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
-import com.ethan0pia.bots.SlayerBot.root.leaves.WalkToCoords;
-import com.ethan0pia.bots.SlayerBot.root.leaves.InteractGameObject;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.WalkToCoords;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.InteractGameObject;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.script.framework.tree.BranchTask;

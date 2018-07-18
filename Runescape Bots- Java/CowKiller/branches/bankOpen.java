@@ -5,9 +5,9 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
 import com.ethan0pia.bots.CowKiller.leaves.closeBank;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 
-public class bankOpen extends BranchTask {
+public class BankOpen extends BranchTask {
 
-	private atCows atCow= new atCows();
+	private AtCows atCow= new AtCows();
 	private closeBank close= new closeBank();
 
 	@Override

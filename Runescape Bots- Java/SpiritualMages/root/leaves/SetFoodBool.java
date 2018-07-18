@@ -1,6 +1,7 @@
-package com.ethan0pia.bots.SlayerBot.root.leaves;
+package com.ethan0pia.bots.SpiritualMages.root.leaves;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.script.framework.tree.LeafTask;
 
 public class SetFoodBool extends LeafTask {
@@ -13,7 +14,9 @@ public class SetFoodBool extends LeafTask {
 
     @Override
     public void execute() {
-        bot.setGetFood(true);
+        Environment.getLogger().debug("SetFoodBool");
+        bot.setCurrentTask("Need Food");
+        bot.setNeedBank(true);
         bot.getUtils().stuckCheck(12);
     }
 }

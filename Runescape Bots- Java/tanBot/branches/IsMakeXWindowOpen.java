@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.tanBot.branches;
+package com.ethan0pia.bots.TanBot.branches;
 
-import com.ethan0pia.bots.tanBot.leaves.ConfirmXandWait;
+import com.ethan0pia.bots.TanBot.leaves.ConfirmXandWait;
 import com.runemate.game.api.rs3.local.hud.interfaces.MakeXInterface;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;

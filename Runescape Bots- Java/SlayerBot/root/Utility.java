@@ -177,7 +177,7 @@ public class Utility {
                 stuckWatch.start();
             }
             if(stuckWatch.getRuntime()>100000 && stuckWatch.getRuntime()<110000){
-                Camera.turnTo(180,0.666);
+                Camera.turnTo(180,Random.nextDouble(0.6,0.9));
             }
             if(stuckWatch.getRuntime()>600000) {
                 if (Inventory.contains(bot.getqTeleport())) {
@@ -186,7 +186,7 @@ public class Utility {
                 }
                 Environment.getLogger().debug("Bot failed in " + leaf);
                 Environment.getLogger().severe("The bot got stuck on a task for more than 10 minutes.");
-                bot.stop();
+                bot.stop("Got stuck");
             }
         }else{
             stuckCheck=leaf;
@@ -223,7 +223,7 @@ public class Utility {
             if (regionPath.step()) {
                 Execution.delayUntil(() -> !bot.getPlayer().isMoving(), 1000, 3000);
             } else {
-                Camera.concurrentlyTurnTo(regionPath.getNext(), Random.nextDouble(0.6, 0.666));
+                Camera.concurrentlyTurnTo(regionPath.getNext(), Random.nextDouble(0.6,0.9));
             }
         }else {
             WebPath webPath = Traversal.getDefaultWeb().getPathBuilder().buildTo(finalCoords);
@@ -231,7 +231,7 @@ public class Utility {
                 if (webPath.step()) {
                     Execution.delayUntil(() -> !bot.getPlayer().isMoving(), 1000, 3000);
                 } else {
-                    Camera.concurrentlyTurnTo(webPath.getNext(), Random.nextDouble(0.6, 0.666));
+                    Camera.concurrentlyTurnTo(webPath.getNext(), Random.nextDouble(0.6,0.9));
                 }
             }
         }

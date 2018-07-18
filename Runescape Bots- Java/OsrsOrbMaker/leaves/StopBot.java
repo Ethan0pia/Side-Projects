@@ -18,7 +18,7 @@ public class StopBot extends LeafTask {
 
     @Override
     public void execute() {
-        System.out.println("StopBot");
+        System.out.println("WaitBot");
         Environment.getLogger().severe("Could not find ring of dueling to use.");
         bot.stop("No ring of dueling.");
     }

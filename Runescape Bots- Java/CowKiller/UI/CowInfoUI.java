@@ -31,7 +31,7 @@ public class CowInfoUI extends GridPane implements Initializable{
 
     public CowInfoUI(CowKiller bot) {
         FXMLLoader loader = new FXMLLoader();
-        Future<InputStream> stream = bot.getPlatform().invokeLater(() -> Resources.getAsStream("com/ethan0pia/bots/CowKiller/ui/CowUI.fxml"));
+        Future<InputStream> stream = bot.getPlatform().invokeLater(() -> Resources.getAsStream("com/ethan0pia/bots/CowKiller/UI/CowUI.fxml"));
         loader.setController(this);
         // NOTE: By setting the root to (this) you must change your .fxml to reflect fx:root
         loader.setRoot(this);

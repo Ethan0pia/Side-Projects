@@ -1,4 +1,4 @@
-package com.ethan0pia.bots.tanBot.leaves;
+package com.ethan0pia.bots.TanBot.leaves;
 
 import com.runemate.game.api.rs3.local.hud.interfaces.MakeXInterface;
 import com.runemate.game.api.script.Execution;

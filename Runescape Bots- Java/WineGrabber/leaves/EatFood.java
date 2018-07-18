@@ -1,6 +1,7 @@
 package com.ethan0pia.bots.WineGrabber.leaves;
 
 import com.ethan0pia.bots.WineGrabber.OpiaWineGrabber;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.hybrid.local.hud.interfaces.SpriteItem;
 import com.runemate.game.api.rs3.local.hud.interfaces.eoc.ActionBar;
@@ -24,24 +25,26 @@ public class EatFood extends LeafTask {
     @Override
     public void execute() {
         try {
-            if (food == null && !checked) {
-                SpriteItem inventoryFood = Inventory.newQuery().actions("Eat").results().first();
-                if (inventoryFood != null) {
-                    String foodName = inventoryFood.getDefinition().getName();
-                    food = ActionBar.newQuery().names(foodName).results().first();
-                    checked = true;
-                }
+            Environment.getLogger().debug("EatFood");
+            if(!bot.isRun()){
+                bot.setRun(true);
             }
-
+            if (food == null && !checked) {
+                food = ActionBar.newQuery().names(bot.getFoodType()).results().first();
+                checked = true;
+            }
             if (food != null && food.isActivatable()) {
                 food.activate(false);
             } else {
-                SpriteItem backupFood = Inventory.newQuery().actions("Eat").results().first();
+                SpriteItem backupFood = Inventory.getItems(bot.getFoodType()).first();
                 if (backupFood != null) {
                     backupFood.interact("Eat");
                 } else {
                     bot.setBankBool(true);
                 }
+            }
+            if((food == null || !food.isActivatable()) && Inventory.getItems(bot.getFoodType()).first()==null){
+                bot.setBankBool(true);
             }
         }catch(Exception e){
             e.printStackTrace();

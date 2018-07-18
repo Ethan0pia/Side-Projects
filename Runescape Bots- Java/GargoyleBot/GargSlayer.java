@@ -28,7 +28,7 @@ public class GargSlayer extends TreeBot implements InventoryListener, Embeddable
 
 
     private boolean bankBool = false, guiWait=true, toAlch=false, usingMagic;
-    private int  whenToEat = 50, gpGained=0;
+    private int  whenToEat = 50, gpGained=0, bankPreset=1;
     private SpriteItem itemToAlch;
     private Player player;
     private LinkedHashMap<Integer, Integer> priceMap = new LinkedHashMap<>();
@@ -107,6 +107,14 @@ public class GargSlayer extends TreeBot implements InventoryListener, Embeddable
         if (infoUI != null && stopWatch.getRuntimeAsString() != null) {
             infoUI.update(stopWatch.getRuntimeAsString(),gpGained,(int) CommonMath.rate(TimeUnit.HOURS, stopWatch.getRuntime(), gpGained));
         }
+    }
+
+    public int getBankPreset() {
+        return bankPreset;
+    }
+
+    public void setBankPreset(int bankPreset) {
+        this.bankPreset = bankPreset;
     }
 
     public boolean isUsingMagic() {

@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.telegrabLeveler.ui;
+package com.ethan0pia.bots.TelegrabLeveler.ui;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
 import com.runemate.game.api.hybrid.util.Resources;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,7 +31,7 @@ public class TelegrabberUI extends GridPane implements Initializable{
 
     public TelegrabberUI(TelegrabLeveler bot) {
         FXMLLoader loader = new FXMLLoader();
-        Future<InputStream> stream = bot.getPlatform().invokeLater(() -> Resources.getAsStream("com/ethan0pia/bots/telegrabLeveler/ui/TeleUI.fxml"));
+        Future<InputStream> stream = bot.getPlatform().invokeLater(() -> Resources.getAsStream("com/ethan0pia/bots/TelegrabLeveler/ui/TeleUI.fxml"));
         loader.setController(this);
         // NOTE: By setting the root to (this) you must change your .fxml to reflect fx:root
         loader.setRoot(this);

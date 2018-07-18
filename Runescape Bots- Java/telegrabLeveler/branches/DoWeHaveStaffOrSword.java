@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.telegrabLeveler.branches;
+package com.ethan0pia.bots.TelegrabLeveler.branches;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Equipment;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;

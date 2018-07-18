@@ -1,8 +1,7 @@
-package com.ethan0pia.bots.tanBot.branches;
+package com.ethan0pia.bots.TanBot.branches;
 
-import com.ethan0pia.bots.tanBot.leaves.UseWell;
-import com.ethan0pia.bots.tanBot.leaves.WaitForWell;
-import com.runemate.game.api.hybrid.entities.GameObject;
+import com.ethan0pia.bots.TanBot.leaves.UseWell;
+import com.ethan0pia.bots.TanBot.leaves.WaitForWell;
 import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.region.GameObjects;
 import com.runemate.game.api.hybrid.region.Players;

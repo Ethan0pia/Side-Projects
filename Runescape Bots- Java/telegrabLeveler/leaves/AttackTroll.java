@@ -1,11 +1,12 @@
-package com.ethan0pia.bots.telegrabLeveler.leaves;
+package com.ethan0pia.bots.TelegrabLeveler.leaves;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
 import com.runemate.game.api.hybrid.entities.Actor;
 import com.runemate.game.api.hybrid.entities.Npc;
 import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.local.Camera;
 import com.runemate.game.api.hybrid.region.Npcs;
+import com.runemate.game.api.hybrid.util.calculations.Random;
 import com.runemate.game.api.script.Execution;
 import com.runemate.game.api.script.framework.tree.LeafTask;
 
@@ -31,9 +32,8 @@ public class AttackTroll extends LeafTask {
             Player player = bot.getPlayer();
             Actor target = player.getTarget();
             if (player.getAnimationId() == -1 &&
-                    (player.getTarget() == null ||
-                            (player.getTarget() == null &&
-                                    !target.getSpotAnimationIds().isEmpty() &&
+                    (target == null ||
+                            (!target.getSpotAnimationIds().isEmpty() &&
                                     (3500 > target.getSpotAnimationIds().get(0) ||
                                             target.getSpotAnimationIds().get(0) > 4500)))) {
                 Npc targetMob = Npcs.newQuery().targeting(player).actions("Attack").names(name).filter(i -> i.getTarget() != null && (i.getSpotAnimationIds().isEmpty() || !(3500 < i.getSpotAnimationIds().get(0) && i.getSpotAnimationIds().get(0) < 4500))).results().nearest();
@@ -49,7 +49,7 @@ public class AttackTroll extends LeafTask {
                             Execution.delayUntil(() -> player.getAnimationId() == -1, 2000);
                         }
                     } else {
-                        Camera.concurrentlyTurnTo(mob);
+                        Camera.concurrentlyTurnTo(mob, Random.nextDouble(0.6,0.9));
                         Execution.delayUntil(mob::isVisible, 2000);
                     }
                 }

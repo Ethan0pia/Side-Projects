@@ -1,7 +1,7 @@
-package com.ethan0pia.bots.tanBot;
+package com.ethan0pia.bots.TanBot;
 
-import com.ethan0pia.bots.tanBot.branches.IsBankOpen;
-import com.ethan0pia.bots.tanBot.ui.PortableInfoUI;
+import com.ethan0pia.bots.TanBot.branches.IsBankOpen;
+import com.ethan0pia.bots.TanBot.ui.PortableInfoUI;
 import com.runemate.game.api.client.embeddable.EmbeddableUI;
 import com.runemate.game.api.hybrid.entities.definitions.ItemDefinition;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;

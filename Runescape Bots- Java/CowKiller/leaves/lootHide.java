@@ -62,7 +62,7 @@ public class lootHide extends LeafTask {
                                 Execution.delay(2000, 3000);
                             } else if (hide.interact("Take")) {
                                 fails=0;
-                                Execution.delayUntil(() -> LootInventory.isOpen(), 1000, 3000);
+                                Execution.delayUntil(LootInventory::isOpen, 1000, 3000);
                             } else {
                                 Execution.delay(200,400);
                                 if(fails>5) {

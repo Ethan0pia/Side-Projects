@@ -6,7 +6,7 @@ import com.ethan0pia.bots.CowKiller.leaves.openBank;
 import com.ethan0pia.bots.CowKiller.leaves.depositSoftLeather;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 
-public class bankOpen2 extends BranchTask {
+public class BankOpen2 extends BranchTask {
 	
 
 	private depositSoftLeather deposit= new depositSoftLeather();

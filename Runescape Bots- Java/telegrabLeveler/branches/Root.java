@@ -1,13 +1,16 @@
-package com.ethan0pia.bots.telegrabLeveler.branches;
+package com.ethan0pia.bots.TelegrabLeveler.branches;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
-import com.ethan0pia.bots.telegrabLeveler.leaves.EmptyLeaf;
-import com.github.sheigutn.pushbullet.items.chat.Chat;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.leaves.EmptyLeaf;
+import com.runemate.game.api.client.ClientUI;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.local.Skill;
 import com.runemate.game.api.hybrid.local.hud.interfaces.ChatDialog;
 import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * NOTES:
@@ -35,6 +38,12 @@ public class Root extends BranchTask {
         }
         bot.setCurrentMagicLevel(Skill.MAGIC.getBaseLevel());
         bot.setPlayer(Players.getLocal());
+
+        if(bot.getStopWatch().getRuntime(TimeUnit.MINUTES) > 200){
+            ClientUI.showAlert("The bot seems to have taken too long to complete.");
+            Environment.getBot().stop("Time ran out.");
+        }
+
         return bot.getPlayer()==null;
     }
 

@@ -34,11 +34,7 @@ public class AlchItem extends LeafTask {
         }
         Execution.delay(1000,1500);
         if(!InterfaceWindows.getInventory().isOpen()){
-            if(Keyboard.isPressed(18)){
-                Keyboard.releaseKey(18);
-            }
-            Execution.delay(500,1200);
-            Keyboard.typeKey(66);
+            InterfaceWindows.getInventory().open();
             Execution.delay(500,1200);
         }
 

@@ -2,6 +2,9 @@ package com.ethan0pia.bots.GargoyleBot.branches;
 
 import com.ethan0pia.bots.GargoyleBot.GargSlayer;
 import com.ethan0pia.bots.GargoyleBot.leaves.AttackGargoyle;
+import com.runemate.game.api.hybrid.entities.Player;
+import com.runemate.game.api.hybrid.local.hud.interfaces.InterfaceComponent;
+import com.runemate.game.api.hybrid.local.hud.interfaces.Interfaces;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -25,7 +28,9 @@ public class AmIInCombat extends BranchTask {
 
     @Override
     public boolean validate() {
-        return bot.getPlayer().getAnimationId()!=-1;
+        InterfaceComponent healthGauge = Interfaces.newQuery().containers(1490).filter(i -> i.getId() == 97648660).results().first();
+        Player player = bot.getPlayer();
+        return !(player.getTarget() == null || healthGauge==null || !healthGauge.isVisible());
     }
 
     @Override

@@ -1,11 +1,10 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
-import com.ethan0pia.bots.SlayerBot.root.leaves.EatFood;
-import com.ethan0pia.bots.SlayerBot.root.leaves.SetFoodBool;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.EatFood;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.SetFoodBool;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
-import com.runemate.game.api.hybrid.local.hud.interfaces.SpriteItem;
-import com.runemate.game.api.rs3.local.hud.interfaces.eoc.ActionBar;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
@@ -27,7 +26,7 @@ public class DoesBagHaveFood extends BranchTask {
 
     @Override
     public boolean validate() {
-        return Inventory.contains("Beltfish");
+        return !Inventory.newQuery().actions("Eat").stacks(false).results().isEmpty();
     }
 
     @Override

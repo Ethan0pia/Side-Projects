@@ -1,8 +1,8 @@
-package com.ethan0pia.bots.telegrabLeveler.branches;
+package com.ethan0pia.bots.TelegrabLeveler.branches;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
-import com.ethan0pia.bots.telegrabLeveler.leaves.EnterCave;
-import com.ethan0pia.bots.telegrabLeveler.leaves.WalkToCaveEntrance;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.leaves.EnterCave;
+import com.ethan0pia.bots.TelegrabLeveler.leaves.WalkToCaveEntrance;
 import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.script.framework.tree.BranchTask;

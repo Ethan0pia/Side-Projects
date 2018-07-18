@@ -1,13 +1,9 @@
-package com.ethan0pia.bots.tanBot.leaves;
+package com.ethan0pia.bots.TanBot.leaves;
 
-import com.runemate.game.api.hybrid.entities.GameObject;
 import com.runemate.game.api.hybrid.input.Keyboard;
 import com.runemate.game.api.hybrid.local.Camera;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
-import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.region.GameObjects;
-import com.runemate.game.api.hybrid.region.Players;
-import com.runemate.game.api.rs3.local.hud.interfaces.MakeXInterface;
 import com.runemate.game.api.script.Execution;
 import com.runemate.game.api.script.framework.tree.LeafTask;
 

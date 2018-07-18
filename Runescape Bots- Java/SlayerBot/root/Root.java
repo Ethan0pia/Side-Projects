@@ -135,7 +135,7 @@ public class Root extends BranchTask {
         if (LootInventory.isEnabled()) {
             ClientUI.showAlert("Loot inventory is enabled. Please turn it off.");
             Environment.getLogger().warn("Loot inventory is enabled. Please turn it off.");
-            bot.stop();
+            bot.stop("Loot Inventory is enabled. Turn it off!");
         }
         
         return checkhealth;

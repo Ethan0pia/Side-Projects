@@ -20,7 +20,7 @@ import javafx.scene.Node;
 
 import java.util.concurrent.TimeUnit;
 
-public class cowKiller extends TreeBot implements InventoryListener, EmbeddableUI {
+public class CowKiller extends TreeBot implements InventoryListener, EmbeddableUI {
 
     private int leatherPrice = GrandExchange.lookup(1741).getPrice();
     private int hideCount=0;
@@ -30,7 +30,7 @@ public class cowKiller extends TreeBot implements InventoryListener, EmbeddableU
 
     private StopWatch stopWatch = new StopWatch();
 
-    public cowKiller(){
+    public CowKiller(){
         hideCount = 0;
         updateInfo();
         // Set this class as the EmbeddableUI
@@ -75,10 +75,11 @@ public class cowKiller extends TreeBot implements InventoryListener, EmbeddableU
         try {
             // Assign all values to a new instance of the Info class
             int rate = (int) CommonMath.rate(TimeUnit.HOURS, stopWatch.getRuntime(), hideCount);
+            int gpRate = (int) CommonMath.rate(TimeUnit.HOURS, stopWatch.getRuntime(), hideCount*leatherPrice);
             String runTime = stopWatch.getRuntimeAsString();
 
             if(runTime != null && infoUI!=null) {
-                infoUI.update(rate, hideCount, runTime, leatherPrice);
+                infoUI.update(rate, hideCount, runTime, leatherPrice, gpRate);
             }
             // Assign all values to a new instance of the Info class
         }catch(Exception e){

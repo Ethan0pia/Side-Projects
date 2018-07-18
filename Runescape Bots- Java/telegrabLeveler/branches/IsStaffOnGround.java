@@ -1,8 +1,8 @@
-package com.ethan0pia.bots.telegrabLeveler.branches;
+package com.ethan0pia.bots.TelegrabLeveler.branches;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
-import com.ethan0pia.bots.telegrabLeveler.leaves.AttackTroll;
-import com.ethan0pia.bots.telegrabLeveler.leaves.LootStaff;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.leaves.AttackTroll;
+import com.ethan0pia.bots.TelegrabLeveler.leaves.LootStaff;
 import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.region.GroundItems;
 import com.runemate.game.api.script.framework.tree.BranchTask;

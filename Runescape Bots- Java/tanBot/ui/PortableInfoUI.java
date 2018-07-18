@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.tanBot.ui;
+package com.ethan0pia.bots.TanBot.ui;
 
-import com.ethan0pia.bots.tanBot.TanningBot;
+import com.ethan0pia.bots.TanBot.TanningBot;
 import com.runemate.game.api.hybrid.util.Resources;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,7 +31,7 @@ public class PortableInfoUI extends GridPane implements Initializable{
 
     public PortableInfoUI(TanningBot bot) {
         FXMLLoader loader = new FXMLLoader();
-        Future<InputStream> stream = bot.getPlatform().invokeLater(() -> Resources.getAsStream("com/ethan0pia/bots/tanBot/ui/PortableUI.fxml"));
+        Future<InputStream> stream = bot.getPlatform().invokeLater(() -> Resources.getAsStream("com/ethan0pia/bots/TanBot/ui/PortableUI.fxml"));
         loader.setController(this);
         // NOTE: By setting the root to (this) you must change your .fxml to reflect fx:root
         loader.setRoot(this);

@@ -29,10 +29,7 @@ public class GargUI extends GridPane implements Initializable {
     private Button start_BT;
 
     @FXML
-    private ChoiceBox<String> food;
-
-    @FXML
-    private ChoiceBox<Boolean>usingMagic;
+    private ChoiceBox<Integer> bankPreset;
 
     private int totalGP, gph;
 
@@ -68,24 +65,25 @@ public class GargUI extends GridPane implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         setVisible(true);
-        food.getItems().addAll("Traut", "Salmon", "Lobster", "Monkfish", "Shark");
-        setDefaults(food);
-        usingMagic.getItems().addAll(true, false);
-        setDefaults(usingMagic);
+        bankPreset.getItems().addAll(1,2,3,4,5,6,7,8,9,10);
+        bot.getSettings();
+        if(bot.getSettings().getProperty("bankPreset")!=null){
+            bankPreset.getSelectionModel().select(Integer.parseInt(bot.getSettings().getProperty("bankPreset")));
+        }else {
+            bankPreset.getSelectionModel().selectFirst();
+        }
         start_BT.setOnAction(getStart_BTAction());
     }
 
-    private void setDefaults(ChoiceBox box){
-        box.getSelectionModel().selectFirst();
-    }
 
     private EventHandler<ActionEvent> getStart_BTAction() {
         return event -> {
             try {
                 bot.getStopWatch().start();
-                bot.setFoodType(food.getSelectionModel().getSelectedItem().trim());
-                bot.setUsingMagic(usingMagic.getSelectionModel().getSelectedItem());
+                bot.setBankPreset(bankPreset.getSelectionModel().getSelectedItem());
                 bot.setGuiWait(false);
+                bot.getSettings();
+                bot.getSettings().setProperty("bankPreset", String.valueOf(bankPreset.getSelectionModel().getSelectedIndex()));
                 start_BT.cancelButtonProperty();
                 start_BT.textProperty().set("Smashing");
             }catch(Exception e){

@@ -1,15 +1,25 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
-import com.ethan0pia.bots.SlayerBot.root.leaves.AttackMob;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.AlchItem;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.AttackMob;
+import com.runemate.game.api.hybrid.Environment;
+import com.runemate.game.api.hybrid.entities.Actor;
 import com.runemate.game.api.hybrid.entities.GroundItem;
+import com.runemate.game.api.hybrid.entities.Npc;
+import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.entities.definitions.ItemDefinition;
 import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.net.GrandExchange;
 import com.runemate.game.api.hybrid.region.GroundItems;
+import com.runemate.game.api.hybrid.region.Npcs;
+import com.runemate.game.api.script.Execution;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * NOTES: done
@@ -17,77 +27,46 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class AreItemsWorthLooting extends BranchTask {
 
-    private DoWeHaveRoomForLoot isinventoryfullorcontainsstackablealready;
-    private AttackMob amIInCombat;
+    private DoWeHaveRoomForLoot doWeHaveRoomForLoot;
+    private AttackMob attackMob;
+    private AlchItem alchItem;
     private OpiaSpiritualMages bot;
-    private Area mobArea = new Area.Circular(new Coordinate(2887,5358,0), 15);
+    private boolean emergencyAlching = false;
+    private Area mobArea = new Area.Rectangular(new Coordinate(2880,5348,0), new Coordinate(2897,5366,0));
 
 
     public AreItemsWorthLooting(OpiaSpiritualMages bot){
         this.bot=bot;
-        amIInCombat = new AttackMob(bot);
-        isinventoryfullorcontainsstackablealready = new DoWeHaveRoomForLoot(bot);
+        attackMob = new AttackMob(bot);
+        doWeHaveRoomForLoot = new DoWeHaveRoomForLoot(bot);
+        alchItem = new AlchItem(bot);
     }
 
     @Override
     public boolean validate() {
-        GroundItem item = GroundItems.newQuery().within(mobArea).filter(
-                i -> (priceCheck(i)>3000 || priceCheck(i)<=1) && ((i.getId() == 995 && i.getQuantity() > 2000) || i.getId()!=995)).results().first();
+        if(bot.isGroundItemsEmpty()) {
+            bot.setGroundItems(GroundItems.newQuery().within(mobArea).filter(i -> bot.priceMapContains(i.getId())).results().asList());
+        }
 
-        if (item != null) {
-            isinventoryfullorcontainsstackablealready.setItem(item);
+        if (!bot.isGroundItemsEmpty()) {
+            doWeHaveRoomForLoot.setItem(bot.getGroundItem());
             return true;
         }
         return false;
     }
 
-    private int priceCheck(GroundItem item){
-        int price = 0;
-        if(item!=null && item.getDefinition()!=null) {
-            ItemDefinition baseDefinition = item.getDefinition();
-            int id = item.getId();
-            if (!bot.priceMapContains(id)) {
-                if (baseDefinition.isNoted()) {
-                    int itemID = baseDefinition.getUnnotedId();
-                    ItemDefinition definition = ItemDefinition.get(itemID);
-                    if (definition != null && definition.isTradeable()) {
-                        GrandExchange.Item geItem = GrandExchange.lookup(itemID);
-                        if (geItem != null) {
-                            price = geItem.getPrice();
-                            bot.put(id, price);
-                            bot.put(itemID, price);
-                        }
-                    } else {
-                        bot.put(id, 0);
-                        bot.put(itemID, 0);
-                    }
-                } else{
-                    if(baseDefinition.isTradeable()){
-                        GrandExchange.Item geItem = GrandExchange.lookup(id);
-                        if (geItem != null) {
-                            price = geItem.getPrice();
-                            bot.put(id, price);
-                        }
-                    }else{
-                        bot.put(id, 0);
-                    }
-                }
-            }else{
-                price=bot.getPrice(item.getId());
-            }
-            return price*item.getQuantity();
-        }
-
-        return price;
-    }
-
     @Override
     public TreeTask failureTask() {
-        return amIInCombat;
+        if(bot.alchItemLength()>3 || (bot.alchItemLength()!=0 && emergencyAlching)){
+            emergencyAlching = true;
+            return alchItem;
+        }
+        emergencyAlching = false;
+        return attackMob;
     }
 
     @Override
     public TreeTask successTask() {
-        return isinventoryfullorcontainsstackablealready;
+        return doWeHaveRoomForLoot;
     }
 }

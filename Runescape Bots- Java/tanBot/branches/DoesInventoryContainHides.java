@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.tanBot.branches;
+package com.ethan0pia.bots.TanBot.branches;
 
-import com.ethan0pia.bots.tanBot.leaves.OpenBank;
+import com.ethan0pia.bots.TanBot.leaves.OpenBank;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;

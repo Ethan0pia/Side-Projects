@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.telegrabLeveler.leaves;
+package com.ethan0pia.bots.TelegrabLeveler.leaves;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.hybrid.local.hud.interfaces.SpriteItem;
 import com.runemate.game.api.script.Execution;
@@ -25,7 +25,7 @@ public class EquipStaff extends LeafTask {
             SpriteItem staff = Inventory.newQuery().ids(1381).results().first();
             if (staff != null) {
                 if (staff.click()) {
-                    Execution.delayUntil(() -> Inventory.contains(1381), 1000);
+                    Execution.delayUntil(() -> Inventory.contains(1381), 200, 3000);
                 }
             }
         }catch(Exception e){

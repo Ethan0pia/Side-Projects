@@ -33,7 +33,7 @@ public class RunToSafeSpot extends LeafTask {
             if(viewPath.step()){
                 Execution.delay(2000,4000);
             }else {
-                Camera.concurrentlyTurnTo(viewPath.getNext(), Random.nextDouble(0.6,0.666));
+                Camera.concurrentlyTurnTo(viewPath.getNext(), Random.nextDouble(0.6,0.9));
             }
         }
         bot.getUtils().stuckCheck(18);

@@ -1,7 +1,8 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
-import com.ethan0pia.bots.SlayerBot.root.leaves.SetAbilityBar;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.SetAbilityBar;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.rs3.local.hud.interfaces.eoc.ActionBar;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
@@ -21,7 +22,7 @@ public class IsAbilityBarSet extends BranchTask {
 
     @Override
     public boolean validate() {
-        return ActionBar.getNumber()==2;
+        return ActionBar.getNumber()==bot.getCombatBar();
     }
 
     @Override

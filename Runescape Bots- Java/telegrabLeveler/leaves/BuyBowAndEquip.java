@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.telegrabLeveler.leaves;
+package com.ethan0pia.bots.TelegrabLeveler.leaves;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
 import com.runemate.game.api.hybrid.local.hud.interfaces.*;
 import com.runemate.game.api.script.Execution;
 import com.runemate.game.api.script.framework.tree.LeafTask;
@@ -35,7 +35,7 @@ public class BuyBowAndEquip extends LeafTask {
                     SpriteItem bow = Inventory.getItems(19830).first();
                     if (bow != null) {
                         if (bow.click()) {
-                            Execution.delay(500, 600);
+                            Execution.delay(1000, 3000);
                         }
                     }
                 } else {
@@ -47,7 +47,7 @@ public class BuyBowAndEquip extends LeafTask {
                             if (take != null) {
                                 Execution.delay(100, 200);
                                 if (take.click()) {
-                                    Execution.delayUntil(() -> Inventory.contains(19830), 1000);
+                                    Execution.delayUntil(() -> Inventory.contains(19830), 1000, 3000);
                                 }
                             }
 

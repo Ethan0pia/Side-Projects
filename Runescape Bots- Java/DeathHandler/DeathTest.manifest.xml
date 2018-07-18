@@ -1,0 +1,22 @@
+<manifest>
+    <main-class>com.ethan0pia.bots.DeathHandler.DeathTester</main-class>
+    <name>DeathTest</name>
+    <tag-line>Makes leather at portable</tag-line><!--Max of 50 chars-->
+    <description>Makes lots of leather for you at portable</description><!--Max of 110 chars-->
+    <version>0.1.1</version>
+    <compatibility>
+        <game>RS3</game>
+    </compatibility>
+    <categories>
+        <category>MONEYMAKING</category>
+    </categories>
+    <!--Required to publish on the bot store-->
+    <internal-id>DeathTest</internal-id>
+    <!--The rest are optional-->
+    <open-source>false</open-source>
+    <hidden>false</hidden> <!--If you need to hide it from the bot store for maintenance-->
+    <access>public</access>
+    <tags>
+        <tag>portables</tag>
+    </tags>
+</manifest>

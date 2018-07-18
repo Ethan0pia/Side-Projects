@@ -1,7 +1,7 @@
-package com.ethan0pia.bots.telegrabLeveler;
+package com.ethan0pia.bots.TelegrabLeveler;
 
-import com.ethan0pia.bots.telegrabLeveler.branches.Root;
-import com.ethan0pia.bots.telegrabLeveler.ui.TelegrabberUI;
+import com.ethan0pia.bots.TelegrabLeveler.branches.Root;
+import com.ethan0pia.bots.TelegrabLeveler.ui.TelegrabberUI;
 import com.runemate.game.api.client.embeddable.EmbeddableUI;
 import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.local.Skill;
@@ -49,7 +49,7 @@ public class TelegrabLeveler extends TreeBot implements EmbeddableUI {
     public void onStart(String... args) {
         stopWatch.start();
         setLoopDelay(300, 450);
-        new LoopingThread(() -> Platform.runLater(() -> updateInfo()), 1000).start();
+        new LoopingThread(() -> Platform.runLater(this::updateInfo), 1000).start();
     }
 
     private void updateInfo() {
@@ -70,6 +70,10 @@ public class TelegrabLeveler extends TreeBot implements EmbeddableUI {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public StopWatch getStopWatch() {
+        return stopWatch;
     }
 
     public Player getPlayer() {

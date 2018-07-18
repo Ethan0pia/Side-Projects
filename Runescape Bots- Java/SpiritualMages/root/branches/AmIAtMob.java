@@ -1,6 +1,7 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.script.framework.tree.BranchTask;
@@ -13,14 +14,14 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class AmIAtMob extends BranchTask {
 
-    private AreItemsWorthLooting areItemsOnGroundWorthX;
+    private AreWeInCombat areWeInCombat;
     private AmIInZammyRoom amIInZammyRoom;
     private OpiaSpiritualMages bot;
-    private Area mobArea = new Area.Circular(new Coordinate(2887,5358,0), 12);
+    private Area mobArea = new Area.Rectangular(new Coordinate(2880,5348,0), new Coordinate(2897,5366,0));
 
     public AmIAtMob(OpiaSpiritualMages bot){
         this.bot=bot;
-        areItemsOnGroundWorthX = new AreItemsWorthLooting(bot);
+        areWeInCombat = new AreWeInCombat(bot);
         amIInZammyRoom = new AmIInZammyRoom(bot);
     }
 
@@ -36,6 +37,6 @@ public class AmIAtMob extends BranchTask {
 
     @Override
     public TreeTask successTask() {
-        return areItemsOnGroundWorthX;
+        return areWeInCombat;
     }
 }

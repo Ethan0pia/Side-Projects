@@ -1,11 +1,11 @@
-package com.ethan0pia.bots.SlayerBot.root;
+package com.ethan0pia.bots.SpiritualMages.root;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
 import com.runemate.game.api.hybrid.Environment;
+import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.local.Camera;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.hybrid.local.hud.interfaces.SpriteItem;
-import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.location.navigation.Traversal;
 import com.runemate.game.api.hybrid.location.navigation.cognizant.RegionPath;
@@ -19,6 +19,8 @@ public class Utility {
     private OpiaSpiritualMages bot;
     private int stuckCheck=0;
     private StopWatch stuckWatch = new StopWatch();
+    private Coordinate oldPosition;
+    private int fails = 0;
 
     public Utility(OpiaSpiritualMages bot){
         this.bot=bot;
@@ -32,16 +34,18 @@ public class Utility {
         if(stuckCheck==0){
             stuckWatch.start();
         }
-        if(stuckCheck==leaf){
+        if(stuckCheck==leaf && leaf!=25){
             if(!stuckWatch.isRunning()){
                 stuckWatch.start();
             }
-            if(stuckWatch.getRuntime()>100000 && stuckWatch.getRuntime()<110000){
-                Camera.turnTo(180,0.666);
+            long stuckWatchTime = stuckWatch.getRuntime();
+            if(stuckWatchTime>100000 && stuckWatchTime<110000){
+                Camera.turnTo(180,Random.nextDouble(0.6,0.9));
             }
-            if(stuckWatch.getRuntime()>600000) {
-                if (Inventory.contains(8010)) {
-                    SpriteItem teleport = Inventory.newQuery().ids(8010).results().first();
+            if(stuckWatchTime>600000) {
+                String teleportStr = bot.getTeleport();
+                if (Inventory.contains(teleportStr)) {
+                    SpriteItem teleport = Inventory.getItems(teleportStr).first();
                     teleport.click();
                 }
                 Environment.getLogger().debug("Bot failed in " + leaf);
@@ -58,20 +62,31 @@ public class Utility {
     }
 
     public void walkPath(Coordinate finalCoords){
+        Player player = bot.getPlayer();
         RegionPath regionPath = RegionPath.buildTo(finalCoords);
         if(regionPath!=null){
             if (regionPath.step()) {
-                Execution.delayUntil(() -> !bot.getPlayer().isMoving(), 1000, 3000);
+                Execution.delayUntil(player::isMoving, 2000, 3000);
+                if(player.isMoving()){
+                    Execution.delayWhile(player::isMoving, 1000, 3000);
+                }else{
+                    Camera.concurrentlyTurnTo(Random.nextInt(0,360), Random.nextDouble(0.6,0.9));
+                }
             } else {
-                Camera.concurrentlyTurnTo(regionPath.getNext(), Random.nextDouble(0.6, 0.666));
+                Camera.concurrentlyTurnTo(Random.nextInt(0,360), Random.nextDouble(0.6,0.9));
             }
         }else {
             WebPath webPath = Traversal.getDefaultWeb().getPathBuilder().buildTo(finalCoords);
             if (webPath != null) {
                 if (webPath.step()) {
-                    Execution.delayUntil(() -> !bot.getPlayer().isMoving(), 1000, 3000);
+                    Execution.delayUntil(player::isMoving, 2000, 3000);
+                    if(player.isMoving()){
+                        Execution.delayWhile(player::isMoving, 1000, 3000);
+                    }else{
+                        Camera.concurrentlyTurnTo(Random.nextInt(0,360), Random.nextDouble(0.6,0.9));
+                    }
                 } else {
-                    Camera.concurrentlyTurnTo(webPath.getNext(), Random.nextDouble(0.6, 0.666));
+                    Camera.concurrentlyTurnTo(Random.nextInt(0,360),Random.nextDouble(0.6,0.9));
                 }
             }
         }

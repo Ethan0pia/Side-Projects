@@ -3,6 +3,7 @@ package com.ethan0pia.bots.WineGrabber.branches;
 import com.ethan0pia.bots.WineGrabber.OpiaWineGrabber;
 import com.ethan0pia.bots.WineGrabber.leaves.OpenBank;
 import com.ethan0pia.bots.WineGrabber.leaves.WithdrawPreset;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
@@ -23,6 +24,7 @@ public class IsBankOpen extends BranchTask {
 
     @Override
     public boolean validate() {
+        Environment.getLogger().debug("IsBankOpen");
         return Bank.isOpen();
     }
 

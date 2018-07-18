@@ -1,7 +1,8 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
-import com.ethan0pia.bots.SlayerBot.root.leaves.WalkMob;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.WalkMob;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.location.Area;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.script.framework.tree.BranchTask;
@@ -16,7 +17,7 @@ public class AmIInZammyRoom extends BranchTask {
     private AreWeInGWD ispathtocaveobstaclenull;
     private WalkMob walkmob;
     private OpiaSpiritualMages bot;
-    private Area zammyRoom=new Area.Rectangular(new Coordinate(2883,5341,0),new Coordinate(2940,5365,0));
+    private Area zammyRoom=new Area.Rectangular(new Coordinate(2881,5341,0),new Coordinate(2940,5365,0));
 
     public AmIInZammyRoom(OpiaSpiritualMages bot){
         this.bot=bot;

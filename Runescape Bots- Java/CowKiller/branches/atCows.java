@@ -8,12 +8,12 @@ import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.region.Players;
 import com.ethan0pia.bots.CowKiller.leaves.walkCows;
 
-public class atCows extends BranchTask {
+public class AtCows extends BranchTask {
 
 	private Player player;
 
 	private walkCows tavLoad= new walkCows();
-	private checkGround ground= new checkGround();
+	private CheckGround ground= new CheckGround();
 
 	private final Area cowArea= new Area.Rectangular(new Coordinate(2877,3497,0), new Coordinate(2892,3479,0));
 

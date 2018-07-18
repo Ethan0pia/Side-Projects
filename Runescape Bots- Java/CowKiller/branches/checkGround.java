@@ -9,7 +9,7 @@ import com.runemate.game.api.hybrid.region.GroundItems;
 import com.ethan0pia.bots.CowKiller.leaves.lootHide;
 import com.ethan0pia.bots.CowKiller.leaves.attackCow;
 
-public class checkGround extends BranchTask {
+public class CheckGround extends BranchTask {
 
 	private Area cowArea= new Area.Rectangular(new Coordinate(2881,3493,0), new Coordinate(2890,3481,0));
 

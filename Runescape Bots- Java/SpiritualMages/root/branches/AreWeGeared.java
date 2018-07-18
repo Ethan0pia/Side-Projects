@@ -1,6 +1,7 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.local.hud.interfaces.*;
 import com.runemate.game.api.rs3.local.hud.interfaces.eoc.ActionBar;
 import com.runemate.game.api.script.framework.tree.BranchTask;
@@ -13,46 +14,42 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
  */
 public class AreWeGeared extends BranchTask {
 
-    private AmIAtBankGeared amIAtBankGeared;
-    private DoesBankNeedToBeClosed amiatbanknotgeared;
+    private AmIAtMob amiatmob;
+    private AreWeAtBank areWeAtBank;
     private OpiaSpiritualMages bot;
 
     public AreWeGeared(OpiaSpiritualMages bot){
         this.bot=bot;
-        amIAtBankGeared = new AmIAtBankGeared(bot);
-        amiatbanknotgeared = new DoesBankNeedToBeClosed(bot);
+        amiatmob = new AmIAtMob(bot);
+        areWeAtBank = new AreWeAtBank(bot);
     }
 
     @Override
     public boolean validate() {
-
-        if (Equipment.getItemIn(Equipment.Slot.AMMUNITION.getIndex()) == null) {
-            return false;
+        if (Equipment.getItemIn(Equipment.Slot.AMMUNITION.getIndex()) == null && bot.isUsingAmmo()) {
+            bot.setNeedBank(true);
         }
 
-        if (Inventory.isFull() && !Inventory.contains("Beltfish")) {
-            bot.setGetFood(true);
-            return false;
+        if ((Inventory.isFull() && Inventory.newQuery().actions("Eat").results().isEmpty()) || !Inventory.contains(bot.getTeleport()) || !Inventory.containsAllOf(561,554)) {
+            bot.setNeedBank(true);
         }
-
-        boolean quickTP = Inventory.contains(8010);
 
         if (!ActionBar.isAutoRetaliating()) {
             ActionBar.toggleAutoRetaliation();
         }
 
-        return quickTP && !bot.isGetFood() && bot.isBankBool();
+        return !bot.isNeedBank();
 
     }
 
     @Override
     public TreeTask failureTask() {
-        return amiatbanknotgeared;
+        return areWeAtBank;
     }
 
     @Override
     public TreeTask successTask() {
-        return amIAtBankGeared;
+        return amiatmob;
     }
 
 }

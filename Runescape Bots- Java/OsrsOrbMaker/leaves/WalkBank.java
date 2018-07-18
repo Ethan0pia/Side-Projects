@@ -21,7 +21,7 @@ public class WalkBank extends LeafTask {
 
     @Override
     public void execute() {
-        System.out.println("WalkBank");
+        System.out.println("WalkFallyBank");
         WebPath path = Traversal.getDefaultWeb().getPathBuilder().buildTo(spot);
         if(path!=null){
             path.step();

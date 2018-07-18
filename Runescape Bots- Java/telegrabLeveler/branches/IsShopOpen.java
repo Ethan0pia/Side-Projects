@@ -1,8 +1,8 @@
-package com.ethan0pia.bots.telegrabLeveler.branches;
+package com.ethan0pia.bots.TelegrabLeveler.branches;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
-import com.ethan0pia.bots.telegrabLeveler.leaves.BuyBowAndEquip;
-import com.ethan0pia.bots.telegrabLeveler.leaves.TalkToShopOwner;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.leaves.BuyBowAndEquip;
+import com.ethan0pia.bots.TelegrabLeveler.leaves.TalkToShopOwner;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Shop;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;

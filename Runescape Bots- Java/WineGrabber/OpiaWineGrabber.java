@@ -2,14 +2,17 @@ package com.ethan0pia.bots.WineGrabber;
 
 import com.ethan0pia.bots.WineGrabber.branches.IsPlayerNull;
 import com.ethan0pia.bots.WineGrabber.ui.WineInfoUI;
+import com.ethan0pia.bots.WineGrabber.uiLite.WineInfoUILite;
+import com.runemate.game.api.client.ClientUI;
 import com.runemate.game.api.client.embeddable.EmbeddableUI;
-import com.runemate.game.api.hybrid.GameEvents;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.entities.Player;
 import com.runemate.game.api.hybrid.entities.definitions.ItemDefinition;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.net.GrandExchange;
 import com.runemate.game.api.hybrid.util.StopWatch;
 import com.runemate.game.api.hybrid.util.calculations.CommonMath;
+import com.runemate.game.api.script.data.Access;
 import com.runemate.game.api.script.framework.core.LoopingThread;
 import com.runemate.game.api.script.framework.listeners.InventoryListener;
 import com.runemate.game.api.script.framework.listeners.events.ItemEvent;
@@ -22,15 +25,20 @@ import javafx.scene.Node;
 
 import java.util.concurrent.TimeUnit;
 
+import static java.util.concurrent.TimeUnit.MINUTES;
+
 public class OpiaWineGrabber extends TreeBot implements InventoryListener, EmbeddableUI {
 
-    private int winePrice = GrandExchange.lookup(245).getPrice();
-    private int wineCount, leafId=0, wineLost = 0;
-    private boolean run=false, bankBool=false;
+    private int winePrice = GrandExchange.lookup(245).getPrice(), cameraYaw = 400;
+    private double cameraPitch = 1;
+    private int wineCount, wineLost = 0, minutes = 0, bankPreset = 1, stopTime = 0, bankLocation = 0;
+    private boolean run=false, bankBool=false, go = false, useTeleport = false, useCam = true;
+    private String foodType;
     private Player player;
     private Coordinate telegrabSpot=new Coordinate(2952,3474,0);
 
     private WineInfoUI infoUI;
+    private WineInfoUILite infoUILite;
     private SimpleObjectProperty<Node> botInterfaceProperty;
 
     private StopWatch stopWatch = new StopWatch();
@@ -50,7 +58,11 @@ public class OpiaWineGrabber extends TreeBot implements InventoryListener, Embed
     @Override
     public ObjectProperty<? extends Node> botInterfaceProperty() {
         if (botInterfaceProperty == null) {
-            botInterfaceProperty = new SimpleObjectProperty<>(infoUI = new WineInfoUI(this));
+            if(Environment.getBot().getMetaData().getHourlyPrice().doubleValue()>0 || Environment.getBot().getMetaData().getAccess().equals(Access.PRIVATE)) {
+                botInterfaceProperty = new SimpleObjectProperty<>(infoUI = new WineInfoUI(this));
+            }else{
+                botInterfaceProperty = new SimpleObjectProperty<>(infoUILite = new WineInfoUILite(this));
+            }
         }
         return botInterfaceProperty;
     }
@@ -58,7 +70,7 @@ public class OpiaWineGrabber extends TreeBot implements InventoryListener, Embed
     @Override
     public void onStart(String... args){
         stopWatch.start();
-        setLoopDelay(300, 500);
+        setLoopDelay(500, 1000);
         new LoopingThread(() -> Platform.runLater(this::updateInfo), 1000).start();
         getEventDispatcher().addListener(this);
     }
@@ -88,9 +100,26 @@ public class OpiaWineGrabber extends TreeBot implements InventoryListener, Embed
                 rate=0;
             }
             String runTime = stopWatch.getRuntimeAsString();
+            int tempMins = (int) stopWatch.getRuntime(MINUTES);
 
-            if(runTime != null && infoUI!=null) {
-                infoUI.update(rate, wineCount, runTime, winePrice, wineLost, lossRate);
+            if(stopTime!=0 && tempMins>=stopTime){
+                ClientUI.showAlert("Stop time reached.");
+                this.stop("Stop time reached.");
+            }
+
+            if(runTime != null) {
+                if(infoUI!=null) {
+                    infoUI.update(rate, wineCount, runTime, winePrice, wineLost, lossRate);
+                }else if (infoUILite!=null){
+                    int minutesAdd = 0;
+                    if(tempMins==0){
+                        minutesAdd = 3;
+                    } else if(minutes<tempMins){
+                        minutesAdd = 1;
+                        minutes = tempMins;
+                    }
+                    infoUILite.update(rate, wineCount, runTime, winePrice, wineLost, lossRate, minutesAdd);
+                }
             }
             // Assign all values to a new instance of the Info class
         }catch(Exception e){
@@ -98,11 +127,48 @@ public class OpiaWineGrabber extends TreeBot implements InventoryListener, Embed
         }
     }
 
-    public int getLeafId() {
-        return leafId;
+    public int getBankPreset() {
+        return bankPreset;
     }
-    public void setLeafId(int leafId) {
-        this.leafId = leafId;
+
+    public void setBankPreset(int bankPreset) {
+        this.bankPreset = bankPreset;
+    }
+
+    public void setStopTime(int stopTime) {
+        this.stopTime = stopTime;
+    }
+
+    public boolean isGo() {
+        return go;
+    }
+
+    public void setGo(boolean go) {
+        this.go = go;
+    }
+
+    public boolean isUseTeleport() {
+        return useTeleport;
+    }
+
+    public void setUseTeleport(boolean useTeleport) {
+        this.useTeleport = useTeleport;
+    }
+
+    public boolean isUseCam() {
+        return useCam;
+    }
+
+    public void setUseCam(boolean useCam) {
+        this.useCam = useCam;
+    }
+
+    public String getFoodType() {
+        return foodType;
+    }
+
+    public void setFoodType(String foodType) {
+        this.foodType = foodType;
     }
 
     public Player getPlayer() {
@@ -135,5 +201,28 @@ public class OpiaWineGrabber extends TreeBot implements InventoryListener, Embed
     }
     public void setWineLost(int wineLost) {
         this.wineLost = wineLost;
+    }
+
+    public int getBankLocation() {
+        return bankLocation;
+    }
+    public void setBankLocation(int bankLocation) {
+        this.bankLocation = bankLocation;
+    }
+
+    public int getCameraYaw() {
+        return cameraYaw;
+    }
+
+    public void setCameraYaw(int cameraYaw) {
+        this.cameraYaw = cameraYaw;
+    }
+
+    public double getCameraPitch() {
+        return cameraPitch;
+    }
+
+    public void setCameraPitch(double cameraPitch) {
+        this.cameraPitch = cameraPitch;
     }
 }

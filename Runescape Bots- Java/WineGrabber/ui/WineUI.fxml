@@ -1,147 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="601.0" type="javafx.scene.layout.GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="441.0" minHeight="10.0" prefHeight="397.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <Label alignment="CENTER" prefHeight="86.0" prefWidth="651.0" text="Opia Wine Grabber" textFill="RED">
-         <font>
-            <Font name="Britannic Bold" size="50.0" />
-         </font>
-      </Label>
-      <GridPane GridPane.rowIndex="1">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <GridPane gridLinesVisible="true">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="148.0" text="Wine collected:" />
-                   <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="146.0" text="Wine Lost:" GridPane.rowIndex="2" />
-                   <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="146.0" text="Lost p/h:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="146.0" text="Wine p/hr:" GridPane.rowIndex="1" />
-                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="146.0" text="GP Gained:" GridPane.columnIndex="2" />
-                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="149.0" text="GP p/h:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label fx:id="wineCollected" alignment="CENTER" prefHeight="36.0" prefWidth="146.0" text="??" GridPane.columnIndex="1" />
-                  <Label fx:id="winePh" alignment="CENTER" prefHeight="36.0" prefWidth="146.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                   <Label fx:id="lost" alignment="CENTER" prefHeight="36.0" prefWidth="146.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                   <Label fx:id="lostRate" alignment="CENTER" prefHeight="36.0" prefWidth="146.0" text="??" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Label fx:id="moneyGained" alignment="CENTER" prefHeight="36.0" prefWidth="146.0" text="??" GridPane.columnIndex="3" />
-                  <Label fx:id="moneyPh" alignment="CENTER" prefHeight="36.0" prefWidth="146.0" text="??" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-               </children>
-            </GridPane>
-            <GridPane gridLinesVisible="true" GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="295.0" text="Runtime:" />
-                  <Label fx:id="uiTime" alignment="CENTER" prefHeight="24.0" prefWidth="299.0" text="??" GridPane.columnIndex="1" />
-               </children>
-            </GridPane>
-         </children>
-      </GridPane>
-      <GridPane prefHeight="397.0" prefWidth="681.0" GridPane.rowIndex="2">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="21.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="46.0" minHeight="9.0" prefHeight="46.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="68.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="106.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="210.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="210.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="210.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label alignment="CENTER" prefHeight="61.0" prefWidth="617.0" text="Smooth Running Instructions/Requirements:" GridPane.rowIndex="1">
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="640.0" text="Have bank preset 1 setup with 26 law runes, an air staff, and some cheap food." GridPane.rowIndex="2">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="640.0" text="Wear some ranged armor for best results and lowest food usage." GridPane.rowIndex="3">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="640.0" text="Make sure your interfaces are not overlapping the game area." GridPane.rowIndex="4">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="640.0" text="To not have interfaces overlap, follow these instructions:" GridPane.rowIndex="5">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="640.0" text="Open the esc menu and select the Quick Load Layout and select Old School...or" GridPane.rowIndex="6" />
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="640.0" text="Open the esc menu and select Edit. Go to Edit Mode and check 3D World Editing." GridPane.rowIndex="7" />
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="640.0" text="Resize the game window until your interfaces no longer overlap with the game area." GridPane.rowIndex="8" />
-         </children>
-      </GridPane>
-      <GridPane prefHeight="397.0" prefWidth="588.0">
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="61.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="106.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="188.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-      </GridPane>
-   </children>
-</GridPane>
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="601.0" type="javafx.scene.layout.GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints />
-      <RowConstraints />
-      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
-      <RowConstraints maxHeight="21.0" minHeight="21.0" prefHeight="21.0" />
-      <RowConstraints />
    </rowConstraints>
    <children>
-      <Label alignment="CENTER" prefHeight="21.0" prefWidth="607.0" text="Have telegrab and food on actionbar with keybinds." textAlignment="CENTER" GridPane.rowIndex="3" />
-      <Label alignment="CENTER" prefHeight="21.0" prefWidth="607.0" text="For Falador Teleport: have it on actionbar, with a keybind, and 1 water rune in preset" textAlignment="CENTER" GridPane.rowIndex="4" />
+      <GridPane prefHeight="653.0" prefWidth="602.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="209.0" minHeight="0.0" prefHeight="73.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="527.0" minHeight="10.0" prefHeight="117.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="527.0" minHeight="10.0" prefHeight="206.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="527.0" minHeight="10.0" prefHeight="195.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="576.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="68.0" prefWidth="619.0" text="OpiaWineGrabber" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Bodoni MT Condensed Bold" size="60.0" />
+               </font>
+            </Label>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="576.0" minWidth="10.0" prefWidth="570.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="0.0" prefWidth="6.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="144.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="288.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="144.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane gridLinesVisible="true" GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="139.0" text="Runtime:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="uiTime" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="??" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="141.0" text="Wine Collected:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="141.0" text="Wine Per Hour:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="142.0" text="Wine Lost:" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="139.0" text="GP Gained:" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="141.0" text="GP Per Hour:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="141.0" text="Lost Per Hour:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="wineCollected" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="??" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="winePh" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lost" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="??" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="moneyGained" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="??" GridPane.columnIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="moneyPh" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="??" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lostRate" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="??" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text="Make sure your interfaces are not overlapping the game area." GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text="Have a bank preset setup with 26 law runes, an air staff equipped, and some cheap food." GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text=" (Optional) Have Falador Teleport on actionbar and 1 water rune in preset." GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text="Wear some ranged armor for the best results and lower food usage." GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text="Smooth Running Instructions and Requirements:">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text="Use the &quot;Old School&quot; layout if you're not sure how to stop interfaces from overlapping." GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text="Have telegrab and food on your actionbar with keybinds." GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="632.0" text="(Optional) Set a time, in minutes from start, to stop the bot." GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="3">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="4.0" prefWidth="4.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="551.0" minWidth="10.0" prefWidth="551.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="21.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="286.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="144.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="107.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="250.0" text="Bank Preset Number:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="bankPreset" prefHeight="31.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="250.0" text="Stop Bot After (minutes):" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="stopTime" prefHeight="31.0" prefWidth="106.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="250.0" text="Food Type:" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="foodType" prefHeight="31.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="250.0" text="Bank:" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="bankChoice" prefHeight="31.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="45.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="85.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="367.0" minWidth="10.0" prefWidth="342.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="67.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="useTeleport" mnemonicParsing="false" prefHeight="31.0" prefWidth="345.0" text="Use Falador Teleport" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="disableCam" mnemonicParsing="false" prefHeight="31.0" prefWidth="345.0" text="Disable Default Camera Position" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="4">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="startButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Start" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
    </children>
 </fx:root>

@@ -26,7 +26,7 @@ public class DoesInventoryContainFood extends BranchTask {
 
     @Override
     public boolean validate() {
-        return Inventory.contains(bot.getFoodType());
+        return !Inventory.newQuery().actions("Eat").results().isEmpty();
     }
 
     @Override

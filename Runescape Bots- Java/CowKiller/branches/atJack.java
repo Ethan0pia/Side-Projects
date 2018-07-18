@@ -9,7 +9,7 @@ import com.runemate.game.api.hybrid.region.Players;
 import com.ethan0pia.bots.CowKiller.leaves.walkJack;
 import com.ethan0pia.bots.CowKiller.leaves.tanHides;
 
-public class atJack extends BranchTask {
+public class AtJack extends BranchTask {
 
 	private final Area jackArea= new Area.Rectangular(new Coordinate(2886,3504,0), new Coordinate(2891,3499,0));
 	private Player player;

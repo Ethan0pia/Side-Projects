@@ -8,13 +8,13 @@ import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.region.Players;
 import com.ethan0pia.bots.CowKiller.leaves.walkBank;
 
-public class atBank extends BranchTask {
+public class AtBank extends BranchTask {
 
 	private final Area bankArea= new Area.Rectangular(new Coordinate(2886,3539,0), new Coordinate(2891,3534,0));
 	private Player player;
 
 	private walkBank atBurth= new walkBank();
-	private bankOpen2 bank= new bankOpen2();
+	private BankOpen2 bank= new BankOpen2();
 
 	@Override
 	public TreeTask successTask() {

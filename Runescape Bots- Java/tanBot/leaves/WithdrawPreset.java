@@ -1,4 +1,4 @@
-package com.ethan0pia.bots.tanBot.leaves;
+package com.ethan0pia.bots.TanBot.leaves;
 
 import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Bank;

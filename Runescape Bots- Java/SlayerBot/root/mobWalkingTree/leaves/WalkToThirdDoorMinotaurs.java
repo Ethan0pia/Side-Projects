@@ -27,7 +27,7 @@ public class WalkToThirdDoorMinotaurs extends LeafTask {
             if(path.step()){
                 Execution.delay(2000,4000);
             }else {
-                Camera.concurrentlyTurnTo(path.getNext(),Random.nextDouble(0.6,0.666));
+                Camera.concurrentlyTurnTo(path.getNext(),Random.nextDouble(0.6,0.9));
             }
         }
         bot.getUtils().stuckCheck(34);

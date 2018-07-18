@@ -1,6 +1,6 @@
-package com.ethan0pia.bots.telegrabLeveler.leaves;
+package com.ethan0pia.bots.TelegrabLeveler.leaves;
 
-import com.ethan0pia.bots.telegrabLeveler.TelegrabLeveler;
+import com.ethan0pia.bots.TelegrabLeveler.TelegrabLeveler;
 import com.runemate.game.api.hybrid.entities.GroundItem;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
 import com.runemate.game.api.hybrid.region.GroundItems;

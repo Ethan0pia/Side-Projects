@@ -1,14 +1,14 @@
-package com.ethan0pia.bots.SlayerBot.root.branches;
+package com.ethan0pia.bots.SpiritualMages.root.branches;
 
-import com.ethan0pia.bots.SlayerBot.OpiaSpiritualMages;
-import com.ethan0pia.bots.SlayerBot.root.leaves.LootItem;
+import com.ethan0pia.bots.SpiritualMages.OpiaSpiritualMages;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.LootItem;
+import com.runemate.game.api.hybrid.Environment;
 import com.runemate.game.api.hybrid.entities.GroundItem;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
-import com.runemate.game.api.rs3.local.hud.interfaces.eoc.ActionBar;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 
-import com.ethan0pia.bots.SlayerBot.root.leaves.EatFood;
+import com.ethan0pia.bots.SpiritualMages.root.leaves.EatFood;
 
 /**
  * NOTES: done
@@ -33,16 +33,14 @@ public class DoWeHaveRoomForLoot extends BranchTask {
 
     @Override
     public boolean validate() {
-        if(item !=null && item.isValid()) {
-            if(!Inventory.isFull()){
+        if(!Inventory.isFull()){
+            lootitem.setItem(item);
+            return false;
+        }
+        if (item.getDefinition().stacks() || item.getDefinition().isNoted()) {
+            if (Inventory.contains(item.getId())) {
                 lootitem.setItem(item);
                 return false;
-            }
-            if (item.getDefinition().stacks() || item.getDefinition().isNoted()) {
-                if (Inventory.contains(item.getId())) {
-                    lootitem.setItem(item);
-                    return false;
-                }
             }
         }
         return true;

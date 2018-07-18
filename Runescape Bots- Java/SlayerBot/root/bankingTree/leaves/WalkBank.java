@@ -28,8 +28,8 @@ public class WalkBank extends LeafTask {
             bot.setClosestBank(bot.getUtils().closestBank());
         }
         Area bank = bot.getClosestBank();
-        if(Camera.getPitch()<0.4){
-            Camera.concurrentlyTurnTo(Random.nextDouble(0.6,0.666));
+        if(Camera.getPitch()<0.6){
+            Camera.concurrentlyTurnTo(Random.nextDouble(0.6,0.9));
         }
         if(!bank.contains(bot.getPlayer())) {
             bot.getUtils().walkPath(bank.getCenter());

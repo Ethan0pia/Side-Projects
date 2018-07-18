@@ -30,8 +30,6 @@ public class LootItem extends LeafTask {
                 Camera.turnTo(item);
             } else {
                 if (!item.interact("Take")) {
-                    Camera.concurrentlyTurnTo(item);
-                    Execution.delay(200,400);
                     item.click();
                 }
                 Execution.delayUntil(() -> !item.isValid(), 1000,2000);
